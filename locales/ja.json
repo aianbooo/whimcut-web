@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "WhimCut — 心惹かれたものを、切り取ろう。",
+    "description": "Mac で切り取り・収集・創作ができるビジュアルツール。"
+  },
+  "nav": {
+    "toggleMenu": "メニューを切り替え",
+    "howItWorks": "使い方",
+    "pricing": "価格",
+    "download": "ダウンロード"
+  },
+  "hero": {
+    "title": "心惹かれたものを、<br>切り取ろう。",
+    "body": "ふと立ち止まってしまうもの。<br>色、かたち、ほんの小さなディテール、ふと浮かんだアイデア——<br><strong>心惹かれたものを残して、自分だけのものに。</strong>",
+    "ctaDownload": "ダウンロード",
+    "ctaSeeHow": "使い方を見る",
+    "cutAgain": "もう一度切り取る",
+    "cutAgainAria": "もう一度切り取る",
+    "instruction": "好きな形を描いて切り取りましょう"
+  },
+  "howItWorks": {
+    "label": "使い方",
+    "cut": {
+      "title": "CUT",
+      "body": "好きなものを、好きな形で。<br>どんなサイズでも、<br>どのアプリやウェブサイトからでも切り取れます。"
+    },
+    "collect": {
+      "title": "COLLECT",
+      "body": "切り取ったものは、すべてひとつの場所に。<br>いつでも検索、見返し、整理できます。"
+    },
+    "create": {
+      "title": "CREATE",
+      "body": "切り取った素材をMoodBoardにドラッグ＆ドロップ。<br>組み合わせて、重ねて、自分だけのものに。",
+      "note": "お気に入りの作品ができたら、Idea Galleryに保存しましょう。"
+    }
+  },
+  "showcase": {
+    "title": "WHIMCUTでつくる",
+    "cards": {
+      "fashion": "ファッション＆スタイル",
+      "design": "デザインリファレンス",
+      "things": "作りたいもの",
+      "life": "暮らしと気分の日記",
+      "art": "アートコラージュ"
+    }
+  },
+  "pricing": {
+    "label": "価格",
+    "headline": "まずは無料で創作を。<br>もっと必要になったら<br>アップグレード。",
+    "subtext": "アイデアが増えてきたら、買い切りで利用上限を引き上げられます。",
+    "free": {
+      "tag": "無料版",
+      "price": "$0",
+      "desc": "今すぐダウンロードして、3つのモジュールを無料で使い始められます。<br>利用期限はありません。",
+      "features": [
+        "フリーフォーム切り取り 無制限",
+        "Idea Galleryに最大70個のCutoutを保存",
+        "Idea Galleryに最大30個のCollageを保存",
+        "MoodBoardで最大15レイヤー"
+      ],
+      "cta": "無料でダウンロード",
+      "note": "macOS 12以降"
+    },
+    "full": {
+      "tag": "フルバージョン",
+      "price": "$14.99",
+      "desc": "Cutout、Collage、レイヤーの数に制限はありません。<br>サブスクリプションは一切ありません。",
+      "features": [
+        "無料版のすべての機能",
+        "Cutout & Collage 無制限",
+        "MoodBoardのレイヤー無制限",
+        "買い切り"
+      ],
+      "cta": "フルバージョンをアンロック",
+      "note": "カード · Apple Pay · Google Pay · Creem経由"
+    }
+  },
+  "download": {
+    "strip": "サブスクなし · アカウント不要 · ローカル保存"
+  },
+  "footer": {
+    "product": {
+      "title": "製品",
+      "features": "機能",
+      "pricing": "価格",
+      "download": "ダウンロード（macOSのみ）",
+      "changelog": "更新履歴"
+    },
+    "support": {
+      "title": "サポート",
+      "contact": "お問い合わせ",
+      "faq": "よくある質問"
+    },
+    "legal": {
+      "title": "法的情報",
+      "privacy": "プライバシーポリシー",
+      "terms": "利用規約"
+    },
+    "copyright": "© 2026 WhimCut · 無断転載を禁じます"
+  }
+}

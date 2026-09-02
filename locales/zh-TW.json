@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "WhimCut — 捕捉每一個自由流動的靈感",
+    "description": "Mac 上一款用於剪裁、收集與創作的可視化工具。"
+  },
+  "nav": {
+    "toggleMenu": "切換選單",
+    "howItWorks": "使用指南",
+    "pricing": "價格",
+    "download": "下載"
+  },
+  "hero": {
+    "title": "捕捉每一個<br>自由流動的靈感",
+    "body": "那些讓你停下目光的東西。<br>一種色彩、一個形狀、一個細微的細節、一閃而過的想法——<br><strong>保存這份靈感，創作屬於你的精彩。</strong>",
+    "ctaDownload": "下載 Mac 版",
+    "ctaSeeHow": "查看使用指南",
+    "cutAgain": "重新剪裁",
+    "cutAgainAria": "重新剪裁",
+    "instruction": "繪製任意形狀即可剪裁"
+  },
+  "howItWorks": {
+    "label": "使用指南",
+    "cut": {
+      "title": "剪裁",
+      "body": "隨心選取。<br>任意形狀、任意大小，<br>從任何 App 或網站中捕捉你想要的內容。"
+    },
+    "collect": {
+      "title": "收集",
+      "body": "所有剪裁內容都保存在同一個地方。<br>隨時搜尋、回顧和整理。"
+    },
+    "create": {
+      "title": "創作",
+      "body": "將你的靈感碎片拖放到 MoodBoard 中。<br>自由組合、搭配，創作屬於你的精彩。",
+      "note": "創作出喜歡的作品？保存到你的 Idea Gallery。"
+    }
+  },
+  "showcase": {
+    "title": "與 WHIMCUT 一起創作",
+    "cards": {
+      "fashion": "時尚與風格",
+      "design": "設計參考",
+      "things": "想創作的東西",
+      "life": "生活與心情日記",
+      "art": "藝術拼貼"
+    }
+  },
+  "pricing": {
+    "label": "價格",
+    "headline": "免費開始創作，<br>需要更多空間時<br>再升級",
+    "subtext": "當你的靈感不斷累積，一次性購買即可解鎖更高使用上限。",
+    "free": {
+      "tag": "永久免費版",
+      "price": "$0",
+      "desc": "立即下載，免費使用全部三個模組。<br>沒有時間限制。",
+      "features": [
+        "無限次自由形狀剪裁",
+        "Idea Gallery 最多保存 70 個剪裁內容",
+        "Idea Gallery 最多保存 30 個拼貼作品",
+        "MoodBoard 最多使用 15 個圖層"
+      ],
+      "cta": "免費下載",
+      "note": "macOS 12 或以上版本"
+    },
+    "full": {
+      "tag": "完整版",
+      "price": "$14.99",
+      "desc": "剪裁內容、拼貼作品和圖層均無數量限制。<br>無需訂閱，永久使用。",
+      "features": [
+        "包含永久免費版全部功能",
+        "無限剪裁內容與拼貼作品",
+        "MoodBoard 無限圖層",
+        "一次性購買"
+      ],
+      "cta": "解鎖完整版",
+      "note": "信用卡 · Apple Pay · Google Pay · 透過 Creem 付款"
+    }
+  },
+  "download": {
+    "strip": "無需訂閱 · 無需帳戶 · 本機儲存"
+  },
+  "footer": {
+    "product": {
+      "title": "產品",
+      "features": "功能",
+      "pricing": "價格",
+      "download": "下載（僅限 macOS）",
+      "changelog": "更新日誌"
+    },
+    "support": {
+      "title": "支援",
+      "contact": "聯絡我們",
+      "faq": "常見問題"
+    },
+    "legal": {
+      "title": "法律",
+      "privacy": "隱私政策",
+      "terms": "服務條款"
+    },
+    "copyright": "© 2026 WhimCut · 保留所有權利"
+  }
+}

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — WhimCut</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="description" content="How WhimCut handles your information — what stays on your Mac, what we collect, and why.">
+  <meta property="og:site_name" content="WhimCut">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:title" content="Privacy Policy — WhimCut">
+  <meta property="og:description" content="How WhimCut handles your information — what stays on your Mac, what we collect, and why.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whimcut.com/privacy.html">
+  <meta property="og:image" content="https://whimcut.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Privacy Policy — WhimCut">
+  <meta name="twitter:description" content="How WhimCut handles your information — what stays on your Mac, what we collect, and why.">
+  <meta name="twitter:image" content="https://whimcut.com/assets/images/og-image.png">
+  <link rel="alternate" hreflang="en" href="https://whimcut.com/privacy.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://whimcut.com/privacy.html?lang=zh-CN" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://whimcut.com/privacy.html?lang=zh-TW" />
+  <link rel="alternate" hreflang="ja" href="https://whimcut.com/privacy.html?lang=ja" />
+  <link rel="alternate" hreflang="de" href="https://whimcut.com/privacy.html?lang=de" />
+  <link rel="alternate" hreflang="x-default" href="https://whimcut.com/privacy.html" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script>
+    (function () {
+      var SUPPORTED = ['en', 'zh-CN', 'zh-TW', 'ja', 'de'];
+      var lang = null;
+      try {
+        var q = new URLSearchParams(window.location.search).get('lang');
+        if (q && SUPPORTED.indexOf(q) !== -1) lang = q;
+      } catch (e) {}
+      if (!lang) {
+        try {
+          var saved = localStorage.getItem('whimcut-lang');
+          if (saved && SUPPORTED.indexOf(saved) !== -1) lang = saved;
+        } catch (e) {}
+      }
+      if (!lang) {
+        var nav = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+        var l = nav.toLowerCase();
+        if (l.indexOf('zh') === 0) lang = /tw|hk|mo|hant/.test(l) ? 'zh-TW' : 'zh-CN';
+        else if (l.indexOf('ja') === 0) lang = 'ja';
+        else if (l.indexOf('de') === 0) lang = 'de';
+      }
+      if (!lang) lang = 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.classList.add('i18n-loading');
+      window.__INITIAL_LANG__ = lang;
+    })();
+  </script>
+  <style>
+    .privacy-hero {
+      padding: 100px 0 50px;
+      scroll-margin-top: 70px;
+    }
+    .privacy-hero h1 {
+      font-family: 'Staatliches', sans-serif;
+      font-size: 100px;
+      line-height: 1.03;
+      margin: 0 0 16px 0;
+      text-transform: uppercase;
+    }
+    .privacy-hero p {
+      font-family: 'Geist', sans-serif;
+      font-size: 20px;
+      line-height: 1.27;
+      color: #595959;
+      margin: 0;
+    }
+    .privacy-content {
+      padding: 10px 0 100px;
+    }
+    .privacy-section {
+      margin-bottom: 40px;
+    }
+    .privacy-section:last-child {
+      margin-bottom: 0;
+    }
+    .privacy-h2 {
+      display: flex;
+      gap: 14px;
+      align-items: baseline;
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      padding-left: 0;
+      margin: 0 0 18px 0;
+    }
+    .privacy-h2 .num {
+      flex: none;
+    }
+    .privacy-item {
+      display: flex;
+      gap: 8px;
+      padding-left: 2.5em;
+      margin-bottom: 14px;
+    }
+    .privacy-item:last-child {
+      margin-bottom: 0;
+    }
+    .privacy-item > .num {
+      flex: none;
+      width: 28px;
+      font-family: 'Geist', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      letter-spacing: 0.05em;
+      font-weight: 300;
+      color: #333333;
+    }
+    .privacy-item > .text {
+      flex: 1;
+      font-family: 'Geist', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #0A050F;
+    }
+    .privacy-item > .text strong {
+      font-weight: 700;
+    }
+    .privacy-item > .text a {
+      color: #0A050F;
+      text-decoration: underline;
+    }
+    .privacy-item > .text a:hover {
+      opacity: 0.6;
+    }
+    .privacy-item > .text code {
+      font-family: 'Geist', sans-serif;
+      background: #E8E7E2;
+      padding: 2px 6px;
+      font-size: 15px;
+    }
+    .privacy-sublist {
+      margin: 10px 0 0 0;
+    }
+    .privacy-subitem {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .privacy-subitem:last-child {
+      margin-bottom: 0;
+    }
+    .privacy-subitem > .num {
+      flex: none;
+      width: 24px;
+      font-family: 'Geist', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    .privacy-subitem > .text {
+      flex: 1;
+      font-family: 'Geist', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #0A050F;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV（与 index.html 完全一致） -->
+  <nav>
+    <div class="nav-logo">
+      <a href="index.html#hero">
+        <img src="assets/images/logo.png" alt="WhimCut" />
+      </a>
+    </div>
+    <div class="nav-actions">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#how-it-works" data-i18n="nav.howItWorks">HOW IT WORKS</a></li>
+        <li><a href="index.html#pricing" data-i18n="nav.pricing">PRICING</a></li>
+        <li><a href="index.html#hero" data-i18n="nav.download">DOWNLOAD</a></li>
+      </ul>
+      <div class="custom-select" id="langSwitcher">
+        <button class="custom-select-toggle" id="langToggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+          <svg class="custom-select-globe" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a15.3 15.3 0 0 1 4 9 15.3 15.3 0 0 1-4 9 15.3 15.3 0 0 1-4-9 15.3 15.3 0 0 1 4-9Z"></path></svg>
+          <span class="custom-select-value" id="langToggleLabel">EN</span>
+          <svg class="custom-select-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+        </button>
+        <ul class="custom-select-menu" id="langMenu" role="listbox" hidden>
+          <li><button type="button" role="option" data-lang="en"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">English</span></button></li>
+          <li><button type="button" role="option" data-lang="zh-CN"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">简体中文</span></button></li>
+          <li><button type="button" role="option" data-lang="zh-TW"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">繁體中文</span></button></li>
+          <li><button type="button" role="option" data-lang="ja"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">日本語</span></button></li>
+          <li><button type="button" role="option" data-lang="de"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">Deutsch</span></button></li>
+        </ul>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false" data-i18n-attr="aria-label:nav.toggleMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div style="height: 70px;"></div>
+
+  <!-- PRIVACY HERO -->
+  <section class="privacy-hero">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p>Last updated: September 1, 2026</p>
+    </div>
+  </section>
+
+  <!-- PRIVACY CONTENT -->
+  <section class="privacy-content">
+    <div class="container">
+
+      <div class="privacy-section">
+        <h2 class="privacy-h2" id="overview"><span class="num">1.</span><span>Overview</span></h2>
+        <div class="privacy-item"><div class="num">1.1</div><div class="text">WhimCut is designed to collect as little personal information as possible. Almost everything you create — your cutouts, collages, and moodboards — stays on your Mac and is never uploaded to our servers.</div></div>
+        <div class="privacy-item"><div class="num">1.2</div><div class="text">This Privacy Policy explains what information may pass through our systems, why we use it, and how we handle it.</div></div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="privacy-h2" id="two-things"><span class="num">2.</span><span>This Policy Covers Two Things</span></h2>
+        <div class="privacy-item"><div class="num">2.1</div><div class="text">This Privacy Policy applies to both <strong>whimcut.com</strong> (this website) and the <strong>WhimCut macOS application</strong>. They handle information differently, so we've explained each separately below.</div></div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="privacy-h2" id="website"><span class="num">3.</span><span>The Website (whimcut.com)</span></h2>
+        <div class="privacy-item"><div class="num">3.1</div><div class="text">We use Google Analytics to understand how many people visit whimcut.com and which pages they look at.</div></div>
+        <div class="privacy-item"><div class="num">3.2</div><div class="text">Google Analytics uses cookies and may collect information such as your approximate location (at the city or region level, not your precise location), browser and device type, and the pages you visit.</div></div>
+        <div class="privacy-item"><div class="num">3.3</div><div class="text">We use this information to understand website traffic and improve the site. We do not use Google Analytics data to identify you personally.</div></div>
+        <div class="privacy-item"><div class="num">3.4</div><div class="text">You can learn more about how Google handles this information in <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</div></div>
+        <div class="privacy-item"><div class="num">3.5</div><div class="text">Most browsers also allow you to block or clear cookies if you prefer not to be tracked this way.</div></div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="privacy-h2" id="app"><span class="num">4.</span><span>The WhimCut App</span></h2>
+        <div class="privacy-item"><div class="num">4.1</div><div class="text"><strong>Local Storage.</strong> Every cutout, collage, and moodboard you create is saved directly on your Mac. Your creative content is not uploaded to our servers or stored in the cloud. WhimCut's core creative features work without an online account or cloud storage.</div></div>
+        <div class="privacy-item"><div class="num">4.2</div><div class="text"><strong>Screen Recording Permission.</strong> WhimCut asks for Screen Recording permission because this is how macOS allows an app to capture content from your screen. WhimCut uses this permission only when you actively perform a screen capture or crop. It does not continuously record your screen, run screen capture in the background, or otherwise store or transmit your screen content.</div></div>
+        <div class="privacy-item"><div class="num">4.3</div><div class="text"><strong>No Account Required.</strong> You do not need to sign up or log in to use WhimCut. We do not collect your name, email address, or registration details simply because you use the app.</div></div>
+        <div class="privacy-item">
+          <div class="num">4.4</div>
+          <div class="text">
+            <strong>License Activation (Full Version Only).</strong> If you purchase the Full Version, activating your license sends the following information to our license verification service:
+            <div class="privacy-sublist">
+              <div class="privacy-subitem"><div class="num">(a)</div><div class="text">Your activation code;</div></div>
+              <div class="privacy-subitem"><div class="num">(b)</div><div class="text">A hardware-derived device identifier for your Mac; and</div></div>
+              <div class="privacy-subitem"><div class="num">(c)</div><div class="text">A short device label containing your Mac's model and a short technical suffix, such as <code>MacBook Pro (15-inch, 2019) · A1B2</code>.</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="privacy-item"><div class="num">4.5</div><div class="text">The device label does not include your Mac's custom device name or your real name.</div></div>
+        <div class="privacy-item"><div class="num">4.6</div><div class="text">Our license verification service checks with Creem, our payment processor and Merchant of Record, to verify that your activation code is valid. This information is used only to confirm your purchase and enforce the device limit associated with your license.</div></div>
+        <div class="privacy-item"><div class="num">4.7</div><div class="text">Our license verification service may process your IP address for a short period to prevent abuse, such as repeated automated attempts to guess activation codes.</div></div>
+        <div class="privacy-item"><div class="num">4.8</div><div class="text">Our hosting and infrastructure providers may also retain standard technical logs, such as IP addresses, request timestamps, and other basic request information, as part of their normal operation.</div></div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="privacy-h2" id="payments"><span class="num">5.</span><span>Payments</span></h2>
+        <div class="privacy-item"><div class="num">5.1</div><div class="text">All payments for WhimCut are processed by <a href="https://www.creem.io" target="_blank" rel="noopener">Creem</a>, acting as our Merchant of Record.</div></div>
+        <div class="privacy-item"><div class="num">5.2</div><div class="text">We do not see or store your card number or full payment details. Payment and transaction information is handled directly by Creem.</div></div>
+        <div class="privacy-item"><div class="num">5.3</div><div class="text">You can learn more about how Creem handles personal information in <a href="https://www.creem.io/privacy" target="_blank" rel="noopener">Creem's Privacy Policy</a>.</div></div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="privacy-h2" id="how-we-use"><span class="num">6.</span><span>How We Use Information</span></h2>
+        <div class="privacy-item">
+          <div class="num">6.1</div>
+          <div class="text">
+            We use the limited information described in this policy only when necessary to:
+            <div class="privacy-sublist">
+              <div class="privacy-subitem"><div class="num">(a)</div><div class="text">operate and improve whimcut.com;</div></div>
+              <div class="privacy-subitem"><div class="num">(b)</div><div class="text">process and verify WhimCut licenses;</div></div>
+              <div class="privacy-subitem"><div class="num">(c)</div><div class="text">prevent abuse and unauthorized use of licenses;</div></div>
+              <div class="privacy-subitem"><div class="num">(d)</div><div class="text">respond to support requests; and</div></div>
+              <div class="privacy-subitem"><div class="num">(e)</div><div class="text">comply with applicable legal obligations.</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="privacy-item"><div class="num">6.2</div><div class="text">We do not sell your personal information.</div></div>
+        <div class="privacy-item"><div class="num">6.3</div><div class="text">We do not use your creative content for advertising, analytics, or AI training.</div></div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="privacy-h2" id="third-party"><span class="num">7.</span><span>Third-Party Services</span></h2>
+        <div class="privacy-item">
+          <div class="num">7.1</div>
+          <div class="text">
+            WhimCut uses a small number of third-party services to operate the website, process payments, and verify licenses. These may include:
+            <div class="privacy-sublist">
+              <div class="privacy-subitem"><div class="num">(a)</div><div class="text"><strong>Google Analytics</strong> — for understanding website traffic and usage;</div></div>
+              <div class="privacy-subitem"><div class="num">(b)</div><div class="text"><strong>Creem</strong> — for payment processing, purchase records, and Merchant of Record services; and</div></div>
+              <div class="privacy-subitem"><div class="num">(c)</div><div class="text"><strong>Hosting and infrastructure providers</strong> — to operate our website and license verification service.</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="privacy-item"><div class="num">7.2</div><div class="text">These providers may process information on our behalf as necessary to provide their services.</div></div>
+        <div class="privacy-item"><div class="num">7.3</div><div class="text">We do not sell your personal information or share it with third parties for their own advertising purposes.</div></div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="privacy-h2" id="contact-support"><span class="num">8.</span><span>If You Contact Us</span></h2>
+        <div class="privacy-item"><div class="num">8.1</div><div class="text">If you email us for support, we will receive your email address and whatever information you choose to include in your message.</div></div>
+        <div class="privacy-item"><div class="num">8.2</div><div class="text">This may include your activation code or other technical information that helps us diagnose an issue.</div></div>
+        <div class="privacy-item"><div class="num">8.3</div><div class="text">We use this information only to provide support, maintain our records, and resolve issues related to WhimCut.</div></div>
+        <div class="privacy-item"><div class="num">8.4</div><div class="text">We do not sell this information or share it with third parties for their own advertising purposes.</div></div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="privacy-h2" id="retention"><span class="num">9.</span><span>Data Retention</span></h2>
+        <div class="privacy-item"><div class="num">9.1</div><div class="text">We keep information only for as long as reasonably necessary for the purposes described in this Privacy Policy.</div></div>
+        <div class="privacy-item"><div class="num">9.2</div><div class="text">License and activation information may be retained for as long as necessary to manage your license, enforce device limits, and prevent unauthorized use.</div></div>
+        <div class="privacy-item"><div class="num">9.3</div><div class="text">Support emails may be retained for as long as reasonably necessary to provide support and maintain appropriate records.</div></div>
+        <div class="privacy-item"><div class="num">9.4</div><div class="text">Technical logs may be retained by our hosting and infrastructure providers according to their own retention policies.</div></div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="privacy-h2" id="security"><span class="num">10.</span><span>Data Security</span></h2>
+        <div class="privacy-item"><div class="num">10.1</div><div class="text">We take reasonable measures to protect the information we process.</div></div>
+        <div class="privacy-item"><div class="num">10.2</div><div class="text">However, no method of transmitting or storing information electronically is completely secure, and we cannot guarantee absolute security.</div></div>
+        <div class="privacy-item"><div class="num">10.3</div><div class="text">Your cutouts, collages, moodboards, and other creative content remain on your Mac and are not transmitted to our servers as part of WhimCut's normal operation.</div></div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="privacy-h2" id="children"><span class="num">11.</span><span>Children's Privacy</span></h2>
+        <div class="privacy-item"><div class="num">11.1</div><div class="text">WhimCut is not directed at children under 13, and we do not knowingly collect personal information from children under 13.</div></div>
+        <div class="privacy-item"><div class="num">11.2</div><div class="text">If you believe that a child has provided us with personal information, please contact us so we can take appropriate action.</div></div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="privacy-h2" id="your-rights"><span class="num">12.</span><span>Your Rights</span></h2>
+        <div class="privacy-item"><div class="num">12.1</div><div class="text">Depending on where you live, you may have certain rights regarding your personal information, including the right to access, correct, or delete information we hold about you.</div></div>
+        <div class="privacy-item"><div class="num">12.2</div><div class="text">For example, these rights may apply under the GDPR if you are in the EU/EEA or under the CCPA and other applicable laws if you are in California.</div></div>
+        <div class="privacy-item"><div class="num">12.3</div><div class="text">Because most of WhimCut's functionality is local and your creative content remains on your own device, there is very little personal information for us to hold.</div></div>
+        <div class="privacy-item"><div class="num">12.4</div><div class="text">For information we do hold, such as support emails or license-related information, you can contact us at <a href="mailto:whimcut.app@gmail.com">whimcut.app@gmail.com</a> and we will do our best to help with your request.</div></div>
+        <div class="privacy-item"><div class="num">12.5</div><div class="text">Purchase and transaction records processed by Creem may be subject to Creem's own privacy practices and legal obligations. For information held by Creem, you may also need to contact Creem directly.</div></div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="privacy-h2" id="transfers"><span class="num">13.</span><span>International Data Transfers</span></h2>
+        <div class="privacy-item"><div class="num">13.1</div><div class="text">Some of our service providers may process information in countries other than the country where you live.</div></div>
+        <div class="privacy-item"><div class="num">13.2</div><div class="text">Where required by applicable law, we take reasonable steps to ensure that such transfers are handled in accordance with applicable data protection requirements.</div></div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="privacy-h2" id="changes"><span class="num">14.</span><span>Changes to This Policy</span></h2>
+        <div class="privacy-item"><div class="num">14.1</div><div class="text">We may update this Privacy Policy from time to time.</div></div>
+        <div class="privacy-item"><div class="num">14.2</div><div class="text">If we make a material change, we will update the "Last updated" date at the top of this page. If required by applicable law, we will provide additional notice.</div></div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="privacy-h2" id="contact"><span class="num">15.</span><span>Contact</span></h2>
+        <div class="privacy-item"><div class="num">15.1</div><div class="text">Questions about this Privacy Policy or how WhimCut handles information?</div></div>
+        <div class="privacy-item"><div class="num">15.2</div><div class="text">Email us at: <a href="mailto:whimcut.app@gmail.com">whimcut.app@gmail.com</a></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CHECKERBOARD -->
+  <div class="checkerboard"></div>
+
+  <!-- FOOTER（与 index.html 完全一致） -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 data-i18n="footer.product.title">PRODUCT</h4>
+          <ul>
+            <li><a href="index.html#how-it-works" data-i18n="footer.product.features">Features</a></li>
+            <li><a href="index.html#pricing" data-i18n="footer.product.pricing">Pricing</a></li>
+            <li><a href="index.html#pricing" data-i18n="footer.product.download">Download (macOS only)</a></li>
+            <li><a href="changelog.html" data-i18n="footer.product.changelog">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.support.title">SUPPORT</h4>
+          <ul>
+            <li><a href="mailto:whimcut.app@gmail.com" data-i18n="footer.support.contact">Contact</a></li>
+            <li><a href="faq.html" data-i18n="footer.support.faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.legal.title">LEGAL</h4>
+          <ul>
+            <li><a href="privacy.html" data-i18n="footer.legal.privacy">Privacy</a></li>
+            <li><a href="terms.html" data-i18n="footer.legal.terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-logo">
+        <img src="assets/images/logo-footer.png" alt="WhimCut" />
+      </div>
+      <p class="footer-copy" data-i18n="footer.copyright">© 2026 WhimCut · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="assets/i18n.js"></script>
+  <script src="assets/nav-mobile.js"></script>
+
+  <div class="checkerboard" style="margin: 0;"></div>
+
+</body>
+</html>

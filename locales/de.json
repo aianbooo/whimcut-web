@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "WhimCut — Schneide aus, was deinen Blick fängt.",
+    "description": "Ein visuelles Tool zum Ausschneiden, Sammeln und Gestalten auf dem Mac."
+  },
+  "nav": {
+    "toggleMenu": "Menü umschalten",
+    "howItWorks": "So funktioniert’s",
+    "pricing": "Preise",
+    "download": "Download"
+  },
+  "hero": {
+    "title": "SCHNEIDE AUS,<br>WAS DEINEN BLICK<br>FÄNGT.",
+    "body": "Für all die Dinge, bei denen du kurz innehältst.<br>Eine Farbe, eine Form, ein kleines Detail, ein flüchtiger Gedanke –<br><strong>behalte, was deinen Blick fängt, und mach es zu deinem.</strong>",
+    "ctaDownload": "FÜR MAC HERUNTERLADEN",
+    "ctaSeeHow": "SO FUNKTIONIERT ES",
+    "cutAgain": "ERNEUT SCHNEIDEN",
+    "cutAgainAria": "Erneut schneiden",
+    "instruction": "Zeichne eine beliebige Form, um sie auszuschneiden"
+  },
+  "howItWorks": {
+    "label": "So funktioniert’s",
+    "cut": {
+      "title": "CUT",
+      "body": "Wähle aus, was dir gefällt.<br>Jede Form, jede Größe –<br>aus jeder App oder Website."
+    },
+    "collect": {
+      "title": "COLLECT",
+      "body": "Alle deine Ausschnitte werden an einem Ort gespeichert.<br>Jederzeit suchen, wiederfinden und organisieren."
+    },
+    "create": {
+      "title": "CREATE",
+      "body": "Ziehe deine Fundstücke per Drag & Drop in dein MoodBoard.<br>Kombinieren, anordnen und zu deinem eigenen machen.",
+      "note": "Etwas geschaffen, das du liebst? Speichere es in deiner Idea Gallery."
+    }
+  },
+  "showcase": {
+    "title": "GEMACHT MIT WHIMCUT",
+    "cards": {
+      "fashion": "MODE & STIL",
+      "design": "DESIGNREFERENZ",
+      "things": "DINGE, DIE ICH MACHEN WILL",
+      "life": "LEBEN & STIMMUNG",
+      "art": "KUNST-COLLAGEN"
+    }
+  },
+  "pricing": {
+    "label": "Preise",
+    "headline": "Kostenlos kreativ werden.<br>Mehr Platz, wenn<br>du ihn brauchst.",
+    "subtext": "Wenn deine Ideen wachsen, kannst du mit einem einmaligen Kauf höhere Limits freischalten.",
+    "free": {
+      "tag": "Kostenlos",
+      "price": "$0",
+      "desc": "Lade WhimCut herunter und nutze alle drei Module sofort kostenlos.<br>Keine zeitliche Begrenzung.",
+      "features": [
+        "Unbegrenzte Freiform-Ausschnitte",
+        "Bis zu 70 Ausschnitte in der Idea Gallery",
+        "Bis zu 30 Collagen in der Idea Gallery",
+        "Bis zu 15 Ebenen im MoodBoard"
+      ],
+      "cta": "KOSTENLOS HERUNTERLADEN",
+      "note": "macOS 12 oder neuer"
+    },
+    "full": {
+      "tag": "Vollversion",
+      "price": "$14.99",
+      "desc": "Keine Limits für Ausschnitte, Collagen oder Ebenen.<br>Kein Abo – niemals.",
+      "features": [
+        "Alles aus der kostenlosen Version",
+        "Unbegrenzte Ausschnitte & Collagen",
+        "Unbegrenzte MoodBoard-Ebenen",
+        "Einmaliger Kauf"
+      ],
+      "cta": "VOLLVERSION FREISCHALTEN",
+      "note": "Karte · Apple Pay · Google Pay · über Creem"
+    }
+  },
+  "download": {
+    "strip": "KEIN ABO · KEIN KONTO · LOKALE SPEICHERUNG"
+  },
+  "footer": {
+    "product": {
+      "title": "Produkt",
+      "features": "Funktionen",
+      "pricing": "Preise",
+      "download": "Download (nur macOS)",
+      "changelog": "Changelog"
+    },
+    "support": {
+      "title": "Support",
+      "contact": "Kontakt",
+      "faq": "FAQ"
+    },
+    "legal": {
+      "title": "Rechtliches",
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen"
+    },
+    "copyright": "© 2026 WhimCut · Alle Rechte vorbehalten"
+  }
+}

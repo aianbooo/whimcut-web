@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — WhimCut</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="description" content="The terms that govern your use of WhimCut, including licensing, purchases, and refunds.">
+  <meta property="og:site_name" content="WhimCut">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:title" content="Terms of Service — WhimCut">
+  <meta property="og:description" content="The terms that govern your use of WhimCut, including licensing, purchases, and refunds.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whimcut.com/terms.html">
+  <meta property="og:image" content="https://whimcut.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terms of Service — WhimCut">
+  <meta name="twitter:description" content="The terms that govern your use of WhimCut, including licensing, purchases, and refunds.">
+  <meta name="twitter:image" content="https://whimcut.com/assets/images/og-image.png">
+  <link rel="alternate" hreflang="en" href="https://whimcut.com/terms.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://whimcut.com/terms.html?lang=zh-CN" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://whimcut.com/terms.html?lang=zh-TW" />
+  <link rel="alternate" hreflang="ja" href="https://whimcut.com/terms.html?lang=ja" />
+  <link rel="alternate" hreflang="de" href="https://whimcut.com/terms.html?lang=de" />
+  <link rel="alternate" hreflang="x-default" href="https://whimcut.com/terms.html" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script>
+    (function () {
+      var SUPPORTED = ['en', 'zh-CN', 'zh-TW', 'ja', 'de'];
+      var lang = null;
+      try {
+        var q = new URLSearchParams(window.location.search).get('lang');
+        if (q && SUPPORTED.indexOf(q) !== -1) lang = q;
+      } catch (e) {}
+      if (!lang) {
+        try {
+          var saved = localStorage.getItem('whimcut-lang');
+          if (saved && SUPPORTED.indexOf(saved) !== -1) lang = saved;
+        } catch (e) {}
+      }
+      if (!lang) {
+        var nav = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+        var l = nav.toLowerCase();
+        if (l.indexOf('zh') === 0) lang = /tw|hk|mo|hant/.test(l) ? 'zh-TW' : 'zh-CN';
+        else if (l.indexOf('ja') === 0) lang = 'ja';
+        else if (l.indexOf('de') === 0) lang = 'de';
+      }
+      if (!lang) lang = 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.classList.add('i18n-loading');
+      window.__INITIAL_LANG__ = lang;
+    })();
+  </script>
+  <style>
+    .legal-hero {
+      padding: 100px 0 50px;
+      scroll-margin-top: 70px;
+    }
+    .legal-hero h1 {
+      font-family: 'Staatliches', sans-serif;
+      font-size: 100px;
+      line-height: 1.03;
+      margin: 0 0 16px 0;
+      text-transform: uppercase;
+    }
+    .legal-hero p {
+      font-family: 'Geist', sans-serif;
+      font-size: 20px;
+      line-height: 1.27;
+      color: #595959;
+      margin: 0;
+    }
+    .legal-content {
+      padding: 10px 0 100px;
+    }
+    .legal-section {
+      margin-bottom: 40px;
+    }
+    .legal-section:last-child {
+      margin-bottom: 0;
+    }
+    .legal-h2 {
+      display: flex;
+      gap: 14px;
+      align-items: baseline;
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      padding-left: 0;
+      margin: 0 0 18px 0;
+    }
+    .legal-h2 .num {
+      flex: none;
+    }
+    .legal-item {
+      display: flex;
+      gap: 8px;
+      padding-left: 2.5em;
+      margin-bottom: 14px;
+    }
+    .legal-item:last-child {
+      margin-bottom: 0;
+    }
+    .legal-item > .num {
+      flex: none;
+      width: 28px;
+      font-family: 'Geist', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      letter-spacing: 0.05em;
+      font-weight: 300;
+      color: #333333;
+    }
+    .legal-item > .text {
+      flex: 1;
+      font-family: 'Geist', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #0A050F;
+    }
+    .legal-item > .text strong {
+      font-weight: 700;
+    }
+    .legal-item > .text a {
+      color: #0A050F;
+      text-decoration: underline;
+    }
+    .legal-item > .text a:hover {
+      opacity: 0.6;
+    }
+    .legal-sublist {
+      margin: 10px 0 0 0;
+    }
+    .legal-subitem {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .legal-subitem:last-child {
+      margin-bottom: 0;
+    }
+    .legal-subitem > .num {
+      flex: none;
+      width: 24px;
+      font-family: 'Geist', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    .legal-subitem > .text {
+      flex: 1;
+      font-family: 'Geist', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #0A050F;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV（与 index.html 完全一致） -->
+  <nav>
+    <div class="nav-logo">
+      <a href="index.html#hero">
+        <img src="assets/images/logo.png" alt="WhimCut" />
+      </a>
+    </div>
+    <div class="nav-actions">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#how-it-works" data-i18n="nav.howItWorks">HOW IT WORKS</a></li>
+        <li><a href="index.html#pricing" data-i18n="nav.pricing">PRICING</a></li>
+        <li><a href="index.html#hero" data-i18n="nav.download">DOWNLOAD</a></li>
+      </ul>
+      <div class="custom-select" id="langSwitcher">
+        <button class="custom-select-toggle" id="langToggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+          <svg class="custom-select-globe" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a15.3 15.3 0 0 1 4 9 15.3 15.3 0 0 1-4 9 15.3 15.3 0 0 1-4-9 15.3 15.3 0 0 1 4-9Z"></path></svg>
+          <span class="custom-select-value" id="langToggleLabel">EN</span>
+          <svg class="custom-select-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+        </button>
+        <ul class="custom-select-menu" id="langMenu" role="listbox" hidden>
+          <li><button type="button" role="option" data-lang="en"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">English</span></button></li>
+          <li><button type="button" role="option" data-lang="zh-CN"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">简体中文</span></button></li>
+          <li><button type="button" role="option" data-lang="zh-TW"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">繁體中文</span></button></li>
+          <li><button type="button" role="option" data-lang="ja"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">日本語</span></button></li>
+          <li><button type="button" role="option" data-lang="de"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">Deutsch</span></button></li>
+        </ul>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false" data-i18n-attr="aria-label:nav.toggleMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div style="height: 70px;"></div>
+
+  <!-- TERMS HERO -->
+  <section class="legal-hero">
+    <div class="container">
+      <h1>Terms of Service</h1>
+      <p>Last updated: September 1, 2026</p>
+    </div>
+  </section>
+
+  <!-- TERMS CONTENT -->
+  <section class="legal-content">
+    <div class="container">
+
+      <div class="legal-section">
+        <h2 class="legal-h2" id="acceptance"><span class="num">1.</span><span>Acceptance of These Terms</span></h2>
+        <div class="legal-item"><div class="num">1.1</div><div class="text">By downloading, installing, accessing, or using WhimCut, you agree to these Terms of Service.</div></div>
+        <div class="legal-item"><div class="num">1.2</div><div class="text">You must be at least 13 years old, and have the ability to enter into a binding agreement under the laws of your country, to use WhimCut.</div></div>
+        <div class="legal-item"><div class="num">1.3</div><div class="text">If you do not agree to these Terms, please do not download, install, or use WhimCut.</div></div>
+        <div class="legal-item"><div class="num">1.4</div><div class="text">These Terms apply to the WhimCut macOS application and related services provided through whimcut.com.</div></div>
+      </div>
+
+      <div class="legal-section">
+        <h2 class="legal-h2" id="about"><span class="num">2.</span><span>About WhimCut</span></h2>
+        <div class="legal-item"><div class="num">2.1</div><div class="text">WhimCut is an independent software project operated by an individual developer.</div></div>
+        <div class="legal-item"><div class="num">2.2</div><div class="text">In these Terms, "WhimCut," "we," "us," and "our" refer to the operator of the WhimCut software and website.</div></div>
+        <div class="legal-item"><div class="num">2.3</div><div class="text">WhimCut is a macOS application designed to help you capture, collect, organize, and create with visual content on your Mac.</div></div>
+        <div class="legal-item">
+          <div class="num">2.4</div>
+          <div class="text">
+            WhimCut is provided in two versions:
+            <div class="legal-sublist">
+              <div class="legal-subitem"><div class="num">(a)</div><div class="text"><strong>Free Version</strong> — available without payment and subject to the usage limits described in the app or on our website; and</div></div>
+              <div class="legal-subitem"><div class="num">(b)</div><div class="text"><strong>Full Version</strong> — available through a one-time purchase and subject to the license terms below.</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="legal-item"><div class="num">2.5</div><div class="text">Features, limits, and pricing may change over time. Any applicable limits and features will be presented to you before you use or purchase the relevant version.</div></div>
+      </div>
+
+      <div class="legal-section">
+        <h2 class="legal-h2" id="license"><span class="num">3.</span><span>License</span></h2>
+        <div class="legal-item"><div class="num">3.1</div><div class="text"><strong>Free Version.</strong> We grant you a limited, personal, non-exclusive, non-transferable license to use the Free Version of WhimCut on your own compatible Mac, subject to these Terms.</div></div>
+        <div class="legal-item"><div class="num">3.2</div><div class="text">The Free Version may include usage limits or other restrictions. These limits are part of the Free Version and may change from time to time.</div></div>
+        <div class="legal-item"><div class="num">3.3</div><div class="text"><strong>Full Version.</strong> When you purchase the Full Version, we grant you a perpetual, personal, non-exclusive, non-transferable license to use the Full Version of WhimCut, subject to these Terms and the applicable device activation limits.</div></div>
+        <div class="legal-item"><div class="num">3.4</div><div class="text">"Perpetual" means that the license does not expire simply because time has passed. It does not mean that we guarantee that WhimCut, its servers, license verification services, or future updates will be available forever.</div></div>
+        <div class="legal-item"><div class="num">3.5</div><div class="text">Your license is for your personal use and may not be sold, transferred, sublicensed, or redistributed to another person.</div></div>
+        <div class="legal-item"><div class="num">3.6</div><div class="text"><strong>Device Activation.</strong> The Full Version is subject to a limit on the number of devices that may be activated under a single license.</div></div>
+        <div class="legal-item"><div class="num">3.7</div><div class="text">We may use device information to verify activations and enforce this limit, as described in our <a href="privacy.html">Privacy Policy</a>.</div></div>
+        <div class="legal-item"><div class="num">3.8</div><div class="text">If you replace your Mac or otherwise need to move your license to another device, you may contact us for assistance.</div></div>
+        <div class="legal-item"><div class="num">3.9</div><div class="text">We may restrict or revoke activations that appear to involve abuse, unauthorized sharing, automated activation attempts, or other violations of these Terms.</div></div>
+      </div>
+
+      <div class="legal-section">
+        <h2 class="legal-h2" id="purchases"><span class="num">4.</span><span>Purchases and Payments</span></h2>
+        <div class="legal-item"><div class="num">4.1</div><div class="text">The Full Version is offered as a one-time purchase at the price displayed at checkout.</div></div>
+        <div class="legal-item"><div class="num">4.2</div><div class="text">The Full Version is not a subscription, and you will not be charged automatically on a recurring basis.</div></div>
+        <div class="legal-item"><div class="num">4.3</div><div class="text">Payments are processed through Creem, which acts as the Merchant of Record for the transaction.</div></div>
+        <div class="legal-item"><div class="num">4.4</div><div class="text">The final price, applicable taxes, and other purchase information will be shown during checkout.</div></div>
+        <div class="legal-item"><div class="num">4.5</div><div class="text">By completing a purchase, you agree to these Terms and any applicable terms presented by Creem during the checkout process.</div></div>
+      </div>
+
+      <div class="legal-section">
+        <h2 class="legal-h2" id="refunds"><span class="num">5.</span><span>Refunds</span></h2>
+        <div class="legal-item"><div class="num">5.1</div><div class="text">We offer a 7-day refund period for purchases of the Full Version.</div></div>
+        <div class="legal-item"><div class="num">5.2</div><div class="text">If you would like to request a refund, please contact us at <a href="mailto:whimcut.app@gmail.com">whimcut.app@gmail.com</a> within 7 days of your purchase. To help us locate your purchase, we may ask for information such as the email address used for the purchase, order information, or your license or activation code.</div></div>
+        <div class="legal-item"><div class="num">5.3</div><div class="text">Refunds are processed through Creem, our Merchant of Record. We do not process refunds directly outside of Creem.</div></div>
+        <div class="legal-item"><div class="num">5.4</div><div class="text">If a refund is approved, Creem will process the refund to the original payment method. Processing times may vary depending on the payment method and financial institution.</div></div>
+        <div class="legal-item"><div class="num">5.5</div><div class="text">Once a refund has been issued, the associated Full Version license will no longer be valid and may be deactivated.</div></div>
+        <div class="legal-item"><div class="num">5.6</div><div class="text">Nothing in this section limits any mandatory refund, withdrawal, or cancellation rights you may have under applicable consumer protection laws.</div></div>
+      </div>
+
+      <div class="legal-section">
+        <h2 class="legal-h2" id="acceptable-use"><span class="num">6.</span><span>Acceptable Use</span></h2>
+        <div class="legal-item"><div class="num">6.1</div><div class="text">You may use WhimCut to capture, organize, edit, and create with content that you have the right to use.</div></div>
+        <div class="legal-item"><div class="num">6.2</div><div class="text">You are responsible for the content you capture, import, save, or create using WhimCut.</div></div>
+        <div class="legal-item">
+          <div class="num">6.3</div>
+          <div class="text">
+            You must not use WhimCut to:
+            <div class="legal-sublist">
+              <div class="legal-subitem"><div class="num">(a)</div><div class="text">reverse engineer, decompile, disassemble, or attempt to derive the source code of the software, except where such activity cannot legally be restricted;</div></div>
+              <div class="legal-subitem"><div class="num">(b)</div><div class="text">bypass, disable, or circumvent license activation, device limits, usage limits, or other technical protections;</div></div>
+              <div class="legal-subitem"><div class="num">(c)</div><div class="text">share, resell, sublicense, rent, lease, or redistribute your license or activation code;</div></div>
+              <div class="legal-subitem"><div class="num">(d)</div><div class="text">distribute modified or unauthorized copies of WhimCut;</div></div>
+              <div class="legal-subitem"><div class="num">(e)</div><div class="text">use automated systems to repeatedly attempt to guess or validate activation codes;</div></div>
+              <div class="legal-subitem"><div class="num">(f)</div><div class="text">use WhimCut in a way that violates applicable laws or infringes the rights of others; or</div></div>
+              <div class="legal-subitem"><div class="num">(g)</div><div class="text">use WhimCut to capture or distribute content that you do not have the right to use.</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="legal-item"><div class="num">6.4</div><div class="text">We reserve the right to take reasonable measures to protect the software, our licensing system, and our users from abuse or unauthorized use.</div></div>
+      </div>
+
+      <div class="legal-section">
+        <h2 class="legal-h2" id="ip"><span class="num">7.</span><span>Intellectual Property</span></h2>
+        <div class="legal-item"><div class="num">7.1</div><div class="text"><strong>WhimCut.</strong> WhimCut and its software, source code, compiled code, user interface, visual design, logos, trademarks, website, and other original materials are owned by us or our licensors and are protected by applicable intellectual property laws.</div></div>
+        <div class="legal-item"><div class="num">7.2</div><div class="text">These Terms do not transfer ownership of WhimCut or any of its intellectual property to you.</div></div>
+        <div class="legal-item"><div class="num">7.3</div><div class="text">Your purchase of the Full Version gives you a license to use the software; it does not constitute a sale or transfer of ownership of the software itself.</div></div>
+        <div class="legal-item"><div class="num">7.4</div><div class="text"><strong>Your Content.</strong> You retain ownership of the images, screenshots, cutouts, collages, moodboards, and other content that you create, import, or use with WhimCut, subject to any rights belonging to third parties.</div></div>
+        <div class="legal-item"><div class="num">7.5</div><div class="text">WhimCut does not claim ownership of your content.</div></div>
+        <div class="legal-item"><div class="num">7.6</div><div class="text">You are responsible for ensuring that you have the necessary rights or permissions to use any third-party content you capture, import, or include in your creations.</div></div>
+        <div class="legal-item"><div class="num">7.7</div><div class="text">As described in our <a href="privacy.html">Privacy Policy</a>, your creative content is stored locally on your Mac and is not uploaded to our servers as part of WhimCut's normal operation.</div></div>
+      </div>
+
+      <div class="legal-section">
+        <h2 class="legal-h2" id="warranties"><span class="num">8.</span><span>Disclaimer of Warranties</span></h2>
+        <div class="legal-item"><div class="num">8.1</div><div class="text">WhimCut is provided "as is" and "as available."</div></div>
+        <div class="legal-item">
+          <div class="num">8.2</div>
+          <div class="text">
+            To the maximum extent permitted by applicable law, we do not guarantee that:
+            <div class="legal-sublist">
+              <div class="legal-subitem"><div class="num">(a)</div><div class="text">WhimCut will always be available or uninterrupted;</div></div>
+              <div class="legal-subitem"><div class="num">(b)</div><div class="text">the software will be completely free of bugs or errors;</div></div>
+              <div class="legal-subitem"><div class="num">(c)</div><div class="text">every feature will work with every Mac, macOS version, display configuration, or third-party application;</div></div>
+              <div class="legal-subitem"><div class="num">(d)</div><div class="text">WhimCut will meet every particular requirement or intended use; or</div></div>
+              <div class="legal-subitem"><div class="num">(e)</div><div class="text">every problem or error will be corrected.</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="legal-item"><div class="num">8.3</div><div class="text">We may update, modify, improve, or discontinue particular features from time to time.</div></div>
+        <div class="legal-item"><div class="num">8.4</div><div class="text">Nothing in these Terms excludes or limits any warranty or consumer protection right that cannot legally be excluded or limited under applicable law.</div></div>
+      </div>
+
+      <div class="legal-section">
+        <h2 class="legal-h2" id="liability"><span class="num">9.</span><span>Limitation of Liability</span></h2>
+        <div class="legal-item"><div class="num">9.1</div><div class="text">To the maximum extent permitted by applicable law, WhimCut and its operator will not be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of data, profits, revenue, business opportunities, or other intangible losses arising from or related to your use of, or inability to use, WhimCut.</div></div>
+        <div class="legal-item"><div class="num">9.2</div><div class="text">To the maximum extent permitted by applicable law, our total liability arising out of or relating to WhimCut or these Terms will not exceed the amount you paid for the applicable WhimCut license giving rise to the claim.</div></div>
+        <div class="legal-item"><div class="num">9.3</div><div class="text">For a Full Version purchase, this amount will generally be no more than the purchase price paid for that license.</div></div>
+        <div class="legal-item"><div class="num">9.4</div><div class="text">Nothing in these Terms limits liability that cannot legally be limited or excluded under applicable law.</div></div>
+      </div>
+
+      <div class="legal-section">
+        <h2 class="legal-h2" id="termination"><span class="num">10.</span><span>Termination</span></h2>
+        <div class="legal-item"><div class="num">10.1</div><div class="text">You may stop using WhimCut at any time.</div></div>
+        <div class="legal-item"><div class="num">10.2</div><div class="text">If you materially violate these Terms, we may suspend or terminate your license to use the Full Version.</div></div>
+        <div class="legal-item"><div class="num">10.3</div><div class="text">If your license is terminated because of a violation of these Terms, you must stop using the Full Version and may be required to remove or deactivate unauthorized copies or activations.</div></div>
+        <div class="legal-item"><div class="num">10.4</div><div class="text">A refund of a Full Version purchase will also result in the associated license becoming invalid.</div></div>
+        <div class="legal-item"><div class="num">10.5</div><div class="text">We may also modify, suspend, or discontinue the WhimCut service or particular online services, including license verification services, when reasonably necessary.</div></div>
+        <div class="legal-item"><div class="num">10.6</div><div class="text">Where reasonably possible, we will try to provide notice of significant changes that materially affect existing users.</div></div>
+        <div class="legal-item"><div class="num">10.7</div><div class="text">Termination or discontinuation does not affect rights or obligations that by their nature should continue after termination, including provisions concerning intellectual property, disclaimers, limitation of liability, and applicable law.</div></div>
+      </div>
+
+      <div class="legal-section">
+        <h2 class="legal-h2" id="changes"><span class="num">11.</span><span>Changes to These Terms</span></h2>
+        <div class="legal-item"><div class="num">11.1</div><div class="text">We may update these Terms from time to time.</div></div>
+        <div class="legal-item"><div class="num">11.2</div><div class="text">If we make material changes, we will update the "Last updated" date at the top of this page and, where appropriate, provide additional notice.</div></div>
+        <div class="legal-item"><div class="num">11.3</div><div class="text">Your continued use of WhimCut after updated Terms become effective means that you accept the updated Terms.</div></div>
+        <div class="legal-item"><div class="num">11.4</div><div class="text">If you do not agree to the updated Terms, you should stop using WhimCut.</div></div>
+      </div>
+
+      <div class="legal-section">
+        <h2 class="legal-h2" id="governing-law"><span class="num">12.</span><span>Governing Law and Disputes</span></h2>
+        <div class="legal-item"><div class="num">12.1</div><div class="text">These Terms govern your use of the WhimCut software and your license to use it. Because WhimCut is offered to users worldwide, these Terms do not designate a specific governing law.</div></div>
+        <div class="legal-item"><div class="num">12.2</div><div class="text">Purchases of the Full Version are processed by Creem, our Merchant of Record. Creem's own terms, available at Creem's <a href="https://www.creem.io/terms" target="_blank" rel="noopener">terms</a>, govern the purchase transaction itself, including billing, refunds processed through Creem, and any related payment disputes.</div></div>
+        <div class="legal-item"><div class="num">12.3</div><div class="text">If a dispute arises in connection with WhimCut or these Terms, we encourage you to contact us first at <a href="mailto:whimcut.app@gmail.com">whimcut.app@gmail.com</a> so that we can try to resolve the issue informally.</div></div>
+        <div class="legal-item"><div class="num">12.4</div><div class="text">Nothing in these Terms is intended to limit any rights or protections that cannot be waived under the laws applicable to you as a consumer.</div></div>
+        <div class="legal-item"><div class="num">12.5</div><div class="text">If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will continue to apply to the extent permitted by law.</div></div>
+      </div>
+
+      <div class="legal-section">
+        <h2 class="legal-h2" id="contact"><span class="num">13.</span><span>Contact</span></h2>
+        <div class="legal-item"><div class="num">13.1</div><div class="text">If you have questions about these Terms, WhimCut, your license, or a purchase, please contact us at: <a href="mailto:whimcut.app@gmail.com">whimcut.app@gmail.com</a></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CHECKERBOARD -->
+  <div class="checkerboard"></div>
+
+  <!-- FOOTER（与 index.html 完全一致） -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 data-i18n="footer.product.title">PRODUCT</h4>
+          <ul>
+            <li><a href="index.html#how-it-works" data-i18n="footer.product.features">Features</a></li>
+            <li><a href="index.html#pricing" data-i18n="footer.product.pricing">Pricing</a></li>
+            <li><a href="index.html#pricing" data-i18n="footer.product.download">Download (macOS only)</a></li>
+            <li><a href="changelog.html" data-i18n="footer.product.changelog">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.support.title">SUPPORT</h4>
+          <ul>
+            <li><a href="mailto:whimcut.app@gmail.com" data-i18n="footer.support.contact">Contact</a></li>
+            <li><a href="faq.html" data-i18n="footer.support.faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.legal.title">LEGAL</h4>
+          <ul>
+            <li><a href="privacy.html" data-i18n="footer.legal.privacy">Privacy</a></li>
+            <li><a href="terms.html" data-i18n="footer.legal.terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-logo">
+        <img src="assets/images/logo-footer.png" alt="WhimCut" />
+      </div>
+      <p class="footer-copy" data-i18n="footer.copyright">© 2026 WhimCut · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="assets/i18n.js"></script>
+  <script src="assets/nav-mobile.js"></script>
+
+  <div class="checkerboard" style="margin: 0;"></div>
+
+</body>
+</html>

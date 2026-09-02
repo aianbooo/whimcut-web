@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "WhimCut — Cut what catches your eye",
+    "description": "A visual tool for cutting, collecting and creating on Mac."
+  },
+  "nav": {
+    "toggleMenu": "Toggle menu",
+    "howItWorks": "HOW IT WORKS",
+    "pricing": "PRICING",
+    "download": "DOWNLOAD"
+  },
+  "hero": {
+    "title": "CUT WHAT<br>CATCHES<br>YOUR EYE.",
+    "body": "For the things that make you pause.<br>A color, a shape, a little detail, a fleeting idea —<br>keep what catches your eye, and <strong>make it yours.</strong>",
+    "ctaDownload": "DOWNLOAD FOR MAC",
+    "ctaSeeHow": "SEE HOW IT WORKS",
+    "cutAgain": "CUT AGAIN",
+    "cutAgainAria": "Cut again",
+    "instruction": "Draw any shape to cut it out"
+  },
+  "howItWorks": {
+    "label": "HOW IT WORKS",
+    "cut": {
+      "title": "CUT",
+      "body": "Select anything.<br>Any shape, any size,<br>from any app or website."
+    },
+    "collect": {
+      "title": "COLLECT",
+      "body": "All your clips are saved<br>in one place. Search, revisit<br>and organize anytime."
+    },
+    "create": {
+      "title": "CREATE",
+      "body": "Drag and drop your<br>fragments into a MoodBoard.<br>Mix, match, make it yours.",
+      "note": "Made something you love? Save it to your Idea Gallery."
+    }
+  },
+  "showcase": {
+    "title": "MADE WITH WHIMCUT",
+    "cards": {
+      "fashion": "FASHION & STYLE",
+      "design": "DESIGN REFERENCE",
+      "things": "THINGS I WANT TO MAKE",
+      "life": "LIFE & MOOD JOURNAL",
+      "art": "ART COLLAGES"
+    }
+  },
+  "pricing": {
+    "label": "PRICING",
+    "headline": "FREE TO START.<br>UPGRADE WHEN YOU<br>NEED MORE.",
+    "subtext": "Download WhimCut and use all three modules for free — forever.<br>Unlock higher limits with a one-time purchase when your library grows.",
+    "free": {
+      "tag": "Free Forever",
+      "price": "$0",
+      "desc": "Download and start using all three modules today.<br>No time limit.",
+      "features": [
+        "Unlimited freeform crops",
+        "Up to 70 Cutouts in Idea Gallery",
+        "Up to 30 Collages in Idea Gallery",
+        "Up to 15 layers in MoodBoard"
+      ],
+      "cta": "DOWNLOAD FREE",
+      "note": "macOS 12 or later"
+    },
+    "full": {
+      "tag": "Full Version",
+      "price": "$14.99",
+      "desc": "No limits on cutouts, collages, or layers.<br>No subscription, ever.",
+      "features": [
+        "Everything in Free",
+        "Unlimited Cutouts & Collages",
+        "Unlimited MoodBoard layers",
+        "One-time purchase"
+      ],
+      "cta": "UNLOCK FULL VERSION",
+      "note": "Card · Apple Pay · Google Pay · via Creem"
+    }
+  },
+  "download": {
+    "strip": "NO SUBSCRIPTION · NO ACCOUNT · LOCAL STORAGE"
+  },
+  "footer": {
+    "product": {
+      "title": "PRODUCT",
+      "features": "Features",
+      "pricing": "Pricing",
+      "download": "Download (macOS only)",
+      "changelog": "Changelog"
+    },
+    "support": {
+      "title": "SUPPORT",
+      "contact": "Contact",
+      "faq": "FAQ"
+    },
+    "legal": {
+      "title": "LEGAL",
+      "privacy": "Privacy",
+      "terms": "Terms"
+    },
+    "copyright": "© 2026 WhimCut · All rights reserved"
+  }
+}

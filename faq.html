@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — WhimCut</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="description" content="Answers to common questions about WhimCut — installation, pricing, privacy, and how the app works.">
+  <meta property="og:site_name" content="WhimCut">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:title" content="FAQ — WhimCut">
+  <meta property="og:description" content="Answers to common questions about WhimCut — installation, pricing, privacy, and how the app works.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whimcut.com/faq.html">
+  <meta property="og:image" content="https://whimcut.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FAQ — WhimCut">
+  <meta name="twitter:description" content="Answers to common questions about WhimCut — installation, pricing, privacy, and how the app works.">
+  <meta name="twitter:image" content="https://whimcut.com/assets/images/og-image.png">
+  <link rel="alternate" hreflang="en" href="https://whimcut.com/faq.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://whimcut.com/faq.html?lang=zh-CN" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://whimcut.com/faq.html?lang=zh-TW" />
+  <link rel="alternate" hreflang="ja" href="https://whimcut.com/faq.html?lang=ja" />
+  <link rel="alternate" hreflang="de" href="https://whimcut.com/faq.html?lang=de" />
+  <link rel="alternate" hreflang="x-default" href="https://whimcut.com/faq.html" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script>
+    (function () {
+      var SUPPORTED = ['en', 'zh-CN', 'zh-TW', 'ja', 'de'];
+      var lang = null;
+      try {
+        var q = new URLSearchParams(window.location.search).get('lang');
+        if (q && SUPPORTED.indexOf(q) !== -1) lang = q;
+      } catch (e) {}
+      if (!lang) {
+        try {
+          var saved = localStorage.getItem('whimcut-lang');
+          if (saved && SUPPORTED.indexOf(saved) !== -1) lang = saved;
+        } catch (e) {}
+      }
+      if (!lang) {
+        var nav = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+        var l = nav.toLowerCase();
+        if (l.indexOf('zh') === 0) lang = /tw|hk|mo|hant/.test(l) ? 'zh-TW' : 'zh-CN';
+        else if (l.indexOf('ja') === 0) lang = 'ja';
+        else if (l.indexOf('de') === 0) lang = 'de';
+      }
+      if (!lang) lang = 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.classList.add('i18n-loading');
+      window.__INITIAL_LANG__ = lang;
+    })();
+  </script>
+  <style>
+    .faq-hero {
+      padding: 100px 0 50px;
+      scroll-margin-top: 70px;
+    }
+    .faq-hero h1 {
+      font-family: 'Staatliches', sans-serif;
+      font-size: 100px;
+      line-height: 1.03;
+      margin: 0 0 16px 0;
+      text-transform: uppercase;
+    }
+    .faq-hero p {
+      font-family: 'Geist', sans-serif;
+      font-size: 20px;
+      line-height: 1.27;
+      color: #595959;
+      margin: 0;
+    }
+    .faq-content {
+      padding: 10px 0 100px;
+    }
+    .faq-item {
+      /* 分隔线已按要求移除，仅靠 summary 自身内边距分隔 */
+    }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 22px 4px;
+      font-family: 'Geist', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+    }
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq-item summary::marker {
+      content: '';
+    }
+    .faq-item .faq-marker {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      position: relative;
+    }
+    .faq-item .faq-marker::before,
+    .faq-item .faq-marker::after {
+      content: '';
+      position: absolute;
+      background: #0A050F;
+      top: 50%;
+      left: 50%;
+      transition: transform 0.15s ease;
+    }
+    .faq-item .faq-marker::before {
+      width: 16px;
+      height: 2px;
+      transform: translate(-50%, -50%);
+    }
+    .faq-item .faq-marker::after {
+      width: 2px;
+      height: 16px;
+      transform: translate(-50%, -50%);
+    }
+    .faq-item[open] .faq-marker::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+      opacity: 0;
+    }
+    .faq-item .faq-answer {
+      font-family: 'Geist', sans-serif;
+      font-size: 17px;
+      line-height: 1.5;
+      color: #595959;
+      margin: 0;
+      padding: 0 30px 26px 4px;
+    }
+    .faq-item .faq-answer ul {
+      margin: 10px 0 0 0;
+      padding-left: 20px;
+    }
+    .faq-item .faq-answer li {
+      margin-bottom: 6px;
+    }
+    .faq-item .faq-answer a {
+      text-decoration: underline;
+    }
+    .faq-item .faq-answer a:hover {
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV（与 index.html 完全一致） -->
+  <nav>
+    <div class="nav-logo">
+      <a href="index.html#hero">
+        <img src="assets/images/logo.png" alt="WhimCut" />
+      </a>
+    </div>
+    <div class="nav-actions">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#how-it-works" data-i18n="nav.howItWorks">HOW IT WORKS</a></li>
+        <li><a href="index.html#pricing" data-i18n="nav.pricing">PRICING</a></li>
+        <li><a href="index.html#hero" data-i18n="nav.download">DOWNLOAD</a></li>
+      </ul>
+      <div class="custom-select" id="langSwitcher">
+        <button class="custom-select-toggle" id="langToggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+          <svg class="custom-select-globe" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a15.3 15.3 0 0 1 4 9 15.3 15.3 0 0 1-4 9 15.3 15.3 0 0 1-4-9 15.3 15.3 0 0 1 4-9Z"></path></svg>
+          <span class="custom-select-value" id="langToggleLabel">EN</span>
+          <svg class="custom-select-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+        </button>
+        <ul class="custom-select-menu" id="langMenu" role="listbox" hidden>
+          <li><button type="button" role="option" data-lang="en"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">English</span></button></li>
+          <li><button type="button" role="option" data-lang="zh-CN"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">简体中文</span></button></li>
+          <li><button type="button" role="option" data-lang="zh-TW"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">繁體中文</span></button></li>
+          <li><button type="button" role="option" data-lang="ja"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">日本語</span></button></li>
+          <li><button type="button" role="option" data-lang="de"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">Deutsch</span></button></li>
+        </ul>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false" data-i18n-attr="aria-label:nav.toggleMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div style="height: 70px;"></div>
+
+  <!-- FAQ HERO -->
+  <section class="faq-hero">
+    <div class="container">
+      <h1>FAQ</h1>
+      <p>Quick answers about WhimCut — plain and simple.</p>
+    </div>
+  </section>
+
+  <!-- FAQ CONTENT -->
+  <section class="faq-content">
+    <div class="container">
+
+      <!-- GETTING STARTED -->
+      <div class="faq-category">
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>What are the system requirements?<span class="faq-marker"></span></summary>
+            <p class="faq-answer">macOS 12 (Monterey) or later. Works on both Intel and Apple Silicon Macs.</p>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- INSTALLATION & PERMISSIONS -->
+      <div class="faq-category">
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>A prompt appears the first time I open WhimCut. Is that normal?<span class="faq-marker"></span></summary>
+            <p class="faq-answer">Yes. WhimCut is signed and notarized by Apple, so you won't see an "unidentified developer" warning — just a standard first-launch confirmation. Click Open, and it won't appear again.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Why does WhimCut need Screen Recording permission?<span class="faq-marker"></span></summary>
+            <p class="faq-answer">To capture the area you select when cropping. WhimCut only reads your screen when you actively trigger a crop — never in the background.</p>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- PRICING & PURCHASE -->
+      <div class="faq-category">
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>What's the difference between Free and Full Version?<span class="faq-marker"></span></summary>
+            <p class="faq-answer">Free gives full access to all three modules. The crop tool has no limits. Idea Gallery holds up to 70 Cutouts and 30 Collages; MoodBoard supports up to 15 layers. Full Version removes these limits, permanently — everything else stays the same.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is this a subscription?<span class="faq-marker"></span></summary>
+            <p class="faq-answer">No. Full Version is a one-time purchase ($14.99) — pay once, use it forever.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What payment methods are supported?<span class="faq-marker"></span></summary>
+            <p class="faq-answer">Credit cards, Apple Pay, and Google Pay. Available options may vary by region and billing address, and we're adding more over time.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do you offer refunds?<span class="faq-marker"></span></summary>
+            <p class="faq-answer">Yes, within 7 days of purchase, no questions asked. Email whimcut.app@gmail.com. After a refund, WhimCut reverts to Free and keeps working — nothing is deleted. For example, if you had 300 Cutouts saved and the free limit is 70, all 300 stay viewable and downloadable; you just can't save new ones until you're back under the limit.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I unlock Full Version after purchasing?<span class="faq-marker"></span></summary>
+            <p class="faq-answer">Your activation code is emailed to you and shown on the order confirmation page. In WhimCut's menu bar icon, click Activate, paste the code, and confirm. Limits are removed immediately — no restart needed.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>My activation failed. What should I do?<span class="faq-marker"></span></summary>
+            <div class="faq-answer">
+              <ul>
+                <li>Double-check the code — copy and paste it rather than typing it</li>
+                <li>Make sure you're connected to the internet</li>
+                <li>"Device limit reached" means the code is already active on 2 devices — email whimcut.app@gmail.com, tell us which device you'd like to deactivate, and we'll free up a slot for you</li>
+              </ul>
+              Still stuck? Email <a href="mailto:whimcut.app@gmail.com">whimcut.app@gmail.com</a> with your code and purchase email.
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- PRIVACY & DATA -->
+      <div class="faq-category">
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>Where are my cutouts stored?<span class="faq-marker"></span></summary>
+            <p class="faq-answer">On your Mac, locally. Nothing is uploaded — WhimCut works entirely offline.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do I need an account?<span class="faq-marker"></span></summary>
+            <p class="faq-answer">No. Just download and use it — no sign-up required.</p>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- USAGE & MORE -->
+      <div class="faq-category">
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>Is there a Windows version?<span class="faq-marker"></span></summary>
+            <p class="faq-answer">Not yet. WhimCut is macOS only for now. We'll announce it on the <a href="changelog.html">Changelog</a> if that changes.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I update to a new version?<span class="faq-marker"></span></summary>
+            <p class="faq-answer">Click Check for Updates in the menu bar to open the download page, then install over your current copy. Your data lives outside the app, so updating never affects it.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I still use Full Version after switching to a new Mac or reinstalling?<span class="faq-marker"></span></summary>
+            <p class="faq-answer">Yes. Reinstalling on the same Mac doesn't use a new slot. Each code covers up to 2 devices — enter your code on the new Mac. If both slots are full, email whimcut.app@gmail.com and we'll free one up.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I contact support?<span class="faq-marker"></span></summary>
+            <p class="faq-answer">Email <a href="mailto:whimcut.app@gmail.com">whimcut.app@gmail.com</a>, or use Contact Support in WhimCut's menu bar icon.</p>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CHECKERBOARD -->
+  <div class="checkerboard"></div>
+
+  <!-- FOOTER（与 index.html 完全一致） -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 data-i18n="footer.product.title">PRODUCT</h4>
+          <ul>
+            <li><a href="index.html#how-it-works" data-i18n="footer.product.features">Features</a></li>
+            <li><a href="index.html#pricing" data-i18n="footer.product.pricing">Pricing</a></li>
+            <li><a href="index.html#pricing" data-i18n="footer.product.download">Download (macOS only)</a></li>
+            <li><a href="changelog.html" data-i18n="footer.product.changelog">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.support.title">SUPPORT</h4>
+          <ul>
+            <li><a href="mailto:whimcut.app@gmail.com" data-i18n="footer.support.contact">Contact</a></li>
+            <li><a href="faq.html" data-i18n="footer.support.faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.legal.title">LEGAL</h4>
+          <ul>
+            <li><a href="privacy.html" data-i18n="footer.legal.privacy">Privacy</a></li>
+            <li><a href="terms.html" data-i18n="footer.legal.terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-logo">
+        <img src="assets/images/logo-footer.png" alt="WhimCut" />
+      </div>
+      <p class="footer-copy" data-i18n="footer.copyright">© 2026 WhimCut · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="assets/i18n.js"></script>
+  <script src="assets/nav-mobile.js"></script>
+
+  <div class="checkerboard" style="margin: 0;"></div>
+
+</body>
+</html>

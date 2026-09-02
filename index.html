@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhimCut — Cut what catches your eye</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="description" content="A visual tool for cutting, collecting and creating on Mac.">
+  <meta property="og:site_name" content="WhimCut">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:title" content="WhimCut — Cut what catches your eye">
+  <meta property="og:description" content="A visual tool for cutting, collecting and creating on Mac.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whimcut.com/">
+  <meta property="og:image" content="https://whimcut.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WhimCut — Cut what catches your eye">
+  <meta name="twitter:description" content="A visual tool for cutting, collecting and creating on Mac.">
+  <meta name="twitter:image" content="https://whimcut.com/assets/images/og-image.png">
+  <link rel="alternate" hreflang="en" href="https://whimcut.com/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://whimcut.com/?lang=zh-CN" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://whimcut.com/?lang=zh-TW" />
+  <link rel="alternate" hreflang="ja" href="https://whimcut.com/?lang=ja" />
+  <link rel="alternate" hreflang="de" href="https://whimcut.com/?lang=de" />
+  <link rel="alternate" hreflang="x-default" href="https://whimcut.com/" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script>
+    (function () {
+      var SUPPORTED = ['en', 'zh-CN', 'zh-TW', 'ja', 'de'];
+      var lang = null;
+      try {
+        var q = new URLSearchParams(window.location.search).get('lang');
+        if (q && SUPPORTED.indexOf(q) !== -1) lang = q;
+      } catch (e) {}
+      if (!lang) {
+        try {
+          var saved = localStorage.getItem('whimcut-lang');
+          if (saved && SUPPORTED.indexOf(saved) !== -1) lang = saved;
+        } catch (e) {}
+      }
+      if (!lang) {
+        var nav = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+        var l = nav.toLowerCase();
+        if (l.indexOf('zh') === 0) lang = /tw|hk|mo|hant/.test(l) ? 'zh-TW' : 'zh-CN';
+        else if (l.indexOf('ja') === 0) lang = 'ja';
+        else if (l.indexOf('de') === 0) lang = 'de';
+      }
+      if (!lang) lang = 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.classList.add('i18n-loading');
+      window.__INITIAL_LANG__ = lang;
+    })();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <a href="index.html#hero">
+        <img src="assets/images/logo.png" alt="WhimCut" />
+      </a>
+    </div>
+    <div class="nav-actions">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#how-it-works" data-i18n="nav.howItWorks">HOW IT WORKS</a></li>
+        <li><a href="#pricing" data-i18n="nav.pricing">PRICING</a></li>
+        <li><a href="#hero" data-i18n="nav.download">DOWNLOAD</a></li>
+      </ul>
+      <div class="custom-select" id="langSwitcher">
+        <button class="custom-select-toggle" id="langToggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+          <svg class="custom-select-globe" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a15.3 15.3 0 0 1 4 9 15.3 15.3 0 0 1-4 9 15.3 15.3 0 0 1-4-9 15.3 15.3 0 0 1 4-9Z"></path></svg>
+          <span class="custom-select-value" id="langToggleLabel">EN</span>
+          <svg class="custom-select-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+        </button>
+        <ul class="custom-select-menu" id="langMenu" role="listbox" hidden>
+          <li><button type="button" role="option" data-lang="en"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">English</span></button></li>
+          <li><button type="button" role="option" data-lang="zh-CN"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">简体中文</span></button></li>
+          <li><button type="button" role="option" data-lang="zh-TW"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">繁體中文</span></button></li>
+          <li><button type="button" role="option" data-lang="ja"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">日本語</span></button></li>
+          <li><button type="button" role="option" data-lang="de"><span class="custom-select-check" aria-hidden="true">✓</span><span class="custom-select-label">Deutsch</span></button></li>
+        </ul>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false" data-i18n-attr="aria-label:nav.toggleMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div style="height: 70px;"></div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container hero-layout">
+      <div class="hero-left">
+        <h1 data-i18n-html="hero.title">CUT WHAT<br>CATCHES<br>YOUR EYE.</h1>
+        <div class="hero-content">
+          <p class="hero-body" data-i18n-html="hero.body">
+            For the things that make you pause.<br>
+            A color, a shape, a little detail, a fleeting idea —<br>
+            keep what catches your eye, and <strong>make it yours.</strong>
+          </p>
+          <div class="hero-buttons">
+            <a href="https://pub-22978aafcb1545f8bf2e676c436d21a8.r2.dev/WhimCut-v2.1.dmg"
+               download
+               class="btn btn-primary" data-i18n="hero.ctaDownload">DOWNLOAD FOR MAC</a>
+            <a href="#how-it-works" class="btn btn-secondary" data-i18n="hero.ctaSeeHow">SEE HOW IT WORKS</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div id="hero-demo">
+          <div id="hero-scene-cut" class="hero-scene">
+            <!-- Task 2: canvas 在此插入 -->
+            <canvas id="hero-bg-canvas"
+                    style="display:block;width:100%;"></canvas>
+            <canvas id="hero-lasso-canvas"
+                    style="position:absolute;top:0;left:0;
+                           width:100%;height:100%;"></canvas>
+          </div>
+          <div id="hero-scene-scrapbook" class="hero-scene">
+            <!-- Task 6: canvas 在此插入 -->
+          </div>
+          <div id="hero-sticker-overlay"></div>
+          <div id="hero-sticker-float"></div>
+          <button id="hero-cut-again" aria-label="Cut again" data-i18n-attr="aria-label:hero.cutAgainAria">✂ <span data-i18n="hero.cutAgain">CUT AGAIN</span></button>
+        </div>
+        <div id="hero-instruction" data-i18n="hero.instruction">Draw any shape to cut it out</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKERBOARD 1 -->
+  <div class="checkerboard"></div>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works">
+    <div class="container">
+      <p class="section-label" data-i18n="howItWorks.label">HOW IT WORKS</p>
+
+      <!-- CUT -->
+      <div class="how-item">
+        <div class="how-text">
+          <h2 data-i18n="howItWorks.cut.title">CUT</h2>
+          <p data-i18n-html="howItWorks.cut.body">Select anything.<br>Any shape, any size,<br>from any app or website.</p>
+        </div>
+        <div class="how-image-frame">
+          <div class="how-image cut-stage">
+          <img src="assets/images/cut-browser-bg.png" class="cut-bg" alt="Browser BG" />
+          <div class="cut-sticker-wrap">
+            <img src="assets/images/cutout.png" class="cut-sticker" alt="Cutout" />
+          </div>
+          <svg class="cut-path-svg" viewBox="0 0 472 357" aria-hidden="true">
+            <defs>
+              <mask id="cut-path-mask">
+                <path class="cut-path-mask-line" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"
+                      d="M429.5,182.2 C429.5,185.6 433.7,188.9 434.9,192.4 C436.1,196.0 436.8,199.9 436.7,203.5 C436.6,207.1 435.4,210.6 434.2,214.0 C433.0,217.4 431.2,220.6 429.4,223.7 C427.6,226.9 425.8,230.1 423.4,232.8 C420.9,235.4 418.0,237.8 414.8,239.5 C411.6,241.3 407.9,242.3 404.4,243.3 C400.9,244.3 396.8,243.5 394.0,245.5 C391.3,247.4 390.3,252.6 387.8,255.2 C385.2,257.9 382.0,259.9 378.8,261.5 C375.5,263.0 371.9,263.9 368.4,264.5 C364.8,265.2 361.1,265.4 357.5,265.2 C353.9,265.1 350.3,264.3 346.8,263.5 C343.3,262.8 339.8,262.0 336.6,260.5 C333.4,258.9 330.3,256.8 327.7,254.3 C325.1,251.8 324.1,247.0 321.0,245.5 C318.0,243.9 313.1,245.7 309.4,244.9 C305.7,244.2 301.9,242.9 298.8,240.9 C295.8,239.0 293.2,236.2 290.9,233.4 C288.6,230.6 286.6,227.4 284.8,224.2 C283.0,221.1 280.8,217.9 279.9,214.4 C279.0,210.9 279.1,206.9 279.3,203.2 C279.5,199.5 280.2,195.8 281.2,192.3 C282.2,188.8 285.7,185.6 285.5,182.2 C285.4,178.9 281.4,175.6 280.2,172.1 C279.0,168.5 278.2,164.6 278.3,161.0 C278.4,157.4 279.6,153.9 280.9,150.5 C282.1,147.1 283.8,143.9 285.7,140.7 C287.5,137.6 289.4,134.5 291.7,131.7 C294.0,129.0 296.6,126.3 299.6,124.3 C302.5,122.2 305.9,120.6 309.4,119.6 C312.9,118.6 317.4,119.6 320.5,118.2 C323.6,116.7 325.4,113.5 328.1,111.1 C330.7,108.7 333.5,105.9 336.6,104.0 C339.7,102.1 343.2,100.7 346.7,100.0 C350.2,99.2 353.9,99.2 357.5,99.2 C361.1,99.2 364.8,99.3 368.4,100.0 C371.9,100.6 375.6,101.3 378.8,103.0 C381.9,104.7 384.8,107.5 387.4,110.2 C389.9,112.8 391.1,117.3 394.0,119.0 C397.0,120.7 401.4,119.5 405.0,120.4 C408.6,121.2 412.5,122.4 415.5,124.3 C418.6,126.2 420.9,129.1 423.4,131.7 C425.8,134.4 428.3,137.2 430.3,140.2 C432.2,143.3 433.9,146.7 435.1,150.1 C436.4,153.5 437.8,157.1 437.7,160.8 C437.7,164.4 436.2,168.5 434.9,172.1 C433.5,175.6 429.5,178.9 429.5,182.2 Z" />
+              </mask>
+            </defs>
+            <path class="cut-dash-path" fill="none" stroke="#0A050F" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round" stroke-linejoin="round" mask="url(#cut-path-mask)"
+                  d="M429.5,182.2 C429.5,185.6 433.7,188.9 434.9,192.4 C436.1,196.0 436.8,199.9 436.7,203.5 C436.6,207.1 435.4,210.6 434.2,214.0 C433.0,217.4 431.2,220.6 429.4,223.7 C427.6,226.9 425.8,230.1 423.4,232.8 C420.9,235.4 418.0,237.8 414.8,239.5 C411.6,241.3 407.9,242.3 404.4,243.3 C400.9,244.3 396.8,243.5 394.0,245.5 C391.3,247.4 390.3,252.6 387.8,255.2 C385.2,257.9 382.0,259.9 378.8,261.5 C375.5,263.0 371.9,263.9 368.4,264.5 C364.8,265.2 361.1,265.4 357.5,265.2 C353.9,265.1 350.3,264.3 346.8,263.5 C343.3,262.8 339.8,262.0 336.6,260.5 C333.4,258.9 330.3,256.8 327.7,254.3 C325.1,251.8 324.1,247.0 321.0,245.5 C318.0,243.9 313.1,245.7 309.4,244.9 C305.7,244.2 301.9,242.9 298.8,240.9 C295.8,239.0 293.2,236.2 290.9,233.4 C288.6,230.6 286.6,227.4 284.8,224.2 C283.0,221.1 280.8,217.9 279.9,214.4 C279.0,210.9 279.1,206.9 279.3,203.2 C279.5,199.5 280.2,195.8 281.2,192.3 C282.2,188.8 285.7,185.6 285.5,182.2 C285.4,178.9 281.4,175.6 280.2,172.1 C279.0,168.5 278.2,164.6 278.3,161.0 C278.4,157.4 279.6,153.9 280.9,150.5 C282.1,147.1 283.8,143.9 285.7,140.7 C287.5,137.6 289.4,134.5 291.7,131.7 C294.0,129.0 296.6,126.3 299.6,124.3 C302.5,122.2 305.9,120.6 309.4,119.6 C312.9,118.6 317.4,119.6 320.5,118.2 C323.6,116.7 325.4,113.5 328.1,111.1 C330.7,108.7 333.5,105.9 336.6,104.0 C339.7,102.1 343.2,100.7 346.7,100.0 C350.2,99.2 353.9,99.2 357.5,99.2 C361.1,99.2 364.8,99.3 368.4,100.0 C371.9,100.6 375.6,101.3 378.8,103.0 C381.9,104.7 384.8,107.5 387.4,110.2 C389.9,112.8 391.1,117.3 394.0,119.0 C397.0,120.7 401.4,119.5 405.0,120.4 C408.6,121.2 412.5,122.4 415.5,124.3 C418.6,126.2 420.9,129.1 423.4,131.7 C425.8,134.4 428.3,137.2 430.3,140.2 C432.2,143.3 433.9,146.7 435.1,150.1 C436.4,153.5 437.8,157.1 437.7,160.8 C437.7,164.4 436.2,168.5 434.9,172.1 C433.5,175.6 429.5,178.9 429.5,182.2 Z" />
+          </svg>
+          <img src="assets/images/cursor-arrow.png" class="cut-cursor" alt="" />
+        </div>
+        </div>
+      </div>
+
+      <!-- COLLECT -->
+      <div class="how-item reverse">
+        <div class="how-text collect-text">
+          <h2 data-i18n="howItWorks.collect.title">COLLECT</h2>
+          <p data-i18n-html="howItWorks.collect.body">All your clips are saved<br>in one place. Search, revisit<br>and organize anytime.</p>
+        </div>
+        <div class="how-image-frame">
+          <div class="how-image collect-stage">
+          <img src="assets/images/collect-browser-bg.png" class="collect-bg" alt="Idea Gallery" />
+          <img src="assets/images/collect-flower.png" class="collect-item item-flower" alt="Flower" />
+          <div class="collect-grid">
+            <img src="assets/images/item-triangle.png" class="collect-item item-1" alt="Triangle" />
+            <img src="assets/images/item-square.png" class="collect-item item-2" alt="Square" />
+            <img src="assets/images/item-bars.png" class="collect-item item-3" alt="Bars" />
+            <img src="assets/images/item-circle.png" class="collect-item item-4" alt="Circle" />
+            <img src="assets/images/item-rtriangle.png" class="collect-item item-5" alt="Right Triangle" />
+            <img src="assets/images/item-squircle.png" class="collect-item item-6" alt="Squircle" />
+          </div>
+          <img src="assets/images/cursor-arrow.png" class="collect-cursor" alt="Cursor" />
+        </div>
+        </div>
+      </div>
+
+      <!-- CREATE -->
+      <div class="how-item">
+        <div class="how-text-wrap">
+          <div class="how-text create-text">
+            <h2 data-i18n="howItWorks.create.title">CREATE</h2>
+            <p data-i18n-html="howItWorks.create.body">Drag and drop your<br>fragments into a MoodBoard.<br>Mix, match, make it yours.</p>
+          </div>
+          <p class="how-note" data-i18n="howItWorks.create.note">Made something you love? Save it to your Idea Gallery.</p>
+        </div>
+        <div class="how-image-frame">
+          <div class="how-image create-stage">
+          <img src="assets/images/create-browser-bg.png" class="create-bg" alt="MoodBoard" />
+
+          <!-- 工具栏高亮覆盖层（用于后续按钮反色） -->
+          <div class="create-toolbar">
+            <button class="btn-tool btn-copy" aria-label="Copy"></button>
+            <button class="btn-tool btn-layer" aria-label="Layer"></button>
+            <button class="btn-tool btn-save" aria-label="Save">Save</button>
+          </div>
+
+          <!-- 右侧画布与初始散落元素 -->
+          <div class="create-canvas">
+            <img src="assets/images/item-flower-yellow.png" class="create-item item-yellow-1" alt="Yellow Flower" />
+            <img src="assets/images/item-flower-purple.png" class="create-item item-purple" alt="Purple Flower" />
+            <img src="assets/images/item-flower-yellow.png" class="create-item item-yellow-2" alt="Yellow Flower Copy" />
+            <img src="assets/images/item-flower-red.png" class="create-item item-red" alt="Red Flower" />
+            <img src="assets/images/item-vase-blue.png" class="create-item item-vase" alt="Blue Vase" />
+            <div class="bounding-box">
+              <div class="handle top-left"></div>
+              <div class="handle top-right"></div>
+              <div class="handle bottom-left"></div>
+              <div class="handle bottom-right"></div>
+              <div class="handle rotate-handle"></div>
+            </div>
+          </div>
+
+          <!-- 像素光标 -->
+          <img src="assets/images/cursor-arrow.png" class="create-cursor" alt="Cursor" />
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKERBOARD 2 -->
+  <div class="checkerboard"></div>
+
+  <!-- MADE WITH WHIMCUT -->
+  <section id="made-with-whimcut">
+    <div class="container">
+      <div class="showcase-section">
+        <h2 class="showcase-title" data-i18n="showcase.title">MADE WITH WHIMCUT</h2>
+        <div class="showcase-carousel-wrapper">
+          <div class="showcase-carousel">
+            <div class="showcase-card" data-index="0">
+              <div class="card-canvas"><img src="assets/images/showcase-1.png" alt="Fashion &amp; Style" /></div>
+              <div class="card-label" data-i18n="showcase.cards.fashion">FASHION &amp; STYLE</div>
+            </div>
+            <div class="showcase-card" data-index="1">
+              <div class="card-canvas"><img src="assets/images/showcase-2.png" alt="Design Reference" /></div>
+              <div class="card-label" data-i18n="showcase.cards.design">DESIGN REFERENCE</div>
+            </div>
+            <div class="showcase-card" data-index="2">
+              <div class="card-canvas"><img src="assets/images/showcase-3.png" alt="Things I Want to Make" /></div>
+              <div class="card-label" data-i18n="showcase.cards.things">THINGS I WANT TO MAKE</div>
+            </div>
+            <div class="showcase-card" data-index="3">
+              <div class="card-canvas"><img src="assets/images/showcase-4.png" alt="Life &amp; Mood Journal" /></div>
+              <div class="card-label" data-i18n="showcase.cards.life">LIFE &amp; MOOD JOURNAL</div>
+            </div>
+            <div class="showcase-card" data-index="4">
+              <div class="card-canvas"><img src="assets/images/showcase-5.png" alt="Art Collages" /></div>
+              <div class="card-label" data-i18n="showcase.cards.art">ART COLLAGES</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKERBOARD 3 -->
+  <div class="checkerboard"></div>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <p class="section-label" data-i18n="pricing.label">PRICING</p>
+      <h2 class="pricing-headline" data-i18n-html="pricing.headline">FREE TO START.<br>UPGRADE WHEN YOU<br>NEED MORE.</h2>
+      <p class="pricing-subtext" data-i18n-html="pricing.subtext">Download WhimCut and use all three modules for free — forever.<br>Unlock higher limits with a one-time purchase when your library grows.</p>
+    </div>
+    <div class="pricing-cards-wrap">
+      <div class="pricing-cards">
+
+        <!-- FREE CARD -->
+        <div class="pricing-card free">
+          <div class="pricing-tag" data-i18n="pricing.free.tag">Free Forever</div>
+          <div class="pricing-price" data-i18n="pricing.free.price">$0</div>
+          <p class="pricing-desc" data-i18n-html="pricing.free.desc">Download and start using all three modules today.<br>No time limit.</p>
+          <ul class="pricing-features">
+            <li><span data-i18n="pricing.free.features.0">Unlimited freeform crops</span> <span class="check">✓</span></li>
+            <li><span data-i18n="pricing.free.features.1">Up to 70 Cutouts in Idea Gallery</span> <span class="check">✓</span></li>
+            <li><span data-i18n="pricing.free.features.2">Up to 30 Collages in Idea Gallery</span> <span class="check">✓</span></li>
+            <li><span data-i18n="pricing.free.features.3">Up to 15 layers in MoodBoard</span> <span class="check">✓</span></li>
+          </ul>
+          <a href="https://pub-22978aafcb1545f8bf2e676c436d21a8.r2.dev/WhimCut-v2.1.dmg"
+             download
+             class="pricing-card-btn" data-i18n="pricing.free.cta">DOWNLOAD FREE</a>
+          <p class="pricing-card-note" data-i18n="pricing.free.note">macOS 12 or later</p>
+        </div>
+
+        <!-- FULL VERSION CARD -->
+        <div class="pricing-card full">
+          <div class="pricing-tag" data-i18n="pricing.full.tag">Full Version</div>
+          <div class="pricing-price" data-i18n="pricing.full.price">$14.99</div>
+          <p class="pricing-desc" data-i18n-html="pricing.full.desc">No limits on cutouts, collages, or layers.<br>No subscription, ever.</p>
+          <ul class="pricing-features">
+            <li><span data-i18n="pricing.full.features.0">Everything in Free</span> <span class="check">✓</span></li>
+            <li><span data-i18n="pricing.full.features.1">Unlimited Cutouts &amp; Collages</span> <span class="check">✓</span></li>
+            <li><span data-i18n="pricing.full.features.2">Unlimited MoodBoard layers</span> <span class="check">✓</span></li>
+            <li><span data-i18n="pricing.full.features.3">One-time purchase</span> <span class="check">✓</span></li>
+          </ul>
+          <a href="#" class="pricing-card-btn" data-i18n="pricing.full.cta">UNLOCK FULL VERSION</a>
+          <p class="pricing-card-note" data-i18n="pricing.full.note">Card · Apple Pay · Google Pay · via Creem</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD STRIP -->
+  <section id="download">
+    <div class="container">
+      <p data-i18n="download.strip">NO SUBSCRIPTION · NO ACCOUNT · LOCAL STORAGE</p>
+    </div>
+  </section>
+
+  <!-- CHECKERBOARD 5 -->
+  <div class="checkerboard"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 data-i18n="footer.product.title">PRODUCT</h4>
+          <ul>
+            <li><a href="#how-it-works" data-i18n="footer.product.features">Features</a></li>
+            <li><a href="#pricing" data-i18n="footer.product.pricing">Pricing</a></li>
+            <li><a href="index.html#pricing" data-i18n="footer.product.download">Download (macOS only)</a></li>
+            <li><a href="changelog.html" data-i18n="footer.product.changelog">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.support.title">SUPPORT</h4>
+          <ul>
+            <li><a href="mailto:whimcut.app@gmail.com" data-i18n="footer.support.contact">Contact</a></li>
+            <li><a href="faq.html" data-i18n="footer.support.faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.legal.title">LEGAL</h4>
+          <ul>
+            <li><a href="privacy.html" data-i18n="footer.legal.privacy">Privacy</a></li>
+            <li><a href="terms.html" data-i18n="footer.legal.terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-logo">
+        <img src="assets/images/logo-footer.png" alt="WhimCut" />
+      </div>
+      <p class="footer-copy" data-i18n="footer.copyright">© 2026 WhimCut · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="assets/hero.js"></script>
+  <script src="assets/cut-animation.js"></script>
+  <script src="assets/collect-animation.js"></script>
+  <script src="assets/create-animation.js"></script>
+  <script src="assets/showcase-carousel.js"></script>
+  <script src="assets/responsive-stages.js"></script>
+  <script src="assets/i18n.js"></script>
+
+  <script>
+    if (history.scrollRestoration) {
+      history.scrollRestoration = 'manual';
+    }
+    window.addEventListener('beforeunload', function () {
+      window.scrollTo(0, 0);
+    });
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
+
+  <script src="assets/nav-mobile.js"></script>
+
+  <div class="checkerboard" style="margin: 0;"></div>
+</body>
+</html>
