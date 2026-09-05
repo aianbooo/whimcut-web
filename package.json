@@ -1,0 +1,12 @@
+{
+  "name": "whimcut-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WhimCut marketing site and license verification proxy",
+  "engines": {
+    "node": "20.x"
+  },
+  "dependencies": {
+    "pg": "^8.23.0"
+  }
+}
