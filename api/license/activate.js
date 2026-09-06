@@ -24,14 +24,15 @@ function extractInstanceId(data) {
 }
 
 async function mapCreemError(res) {
-  let message = '';
+  let raw = '';
   try {
-    message = JSON.stringify(await res.json()).toLowerCase();
-  } catch {
-    try {
-      message = (await res.text()).toLowerCase();
-    } catch {}
-  }
+    raw = await res.text();
+  } catch {}
+
+  console.log('[Creem] status:', res.status);
+  console.log('[Creem] body:', raw);
+
+  const message = raw.toLowerCase();
 
   if (res.status === 404) {
     return { status: 404, code: 'license_invalid' };
@@ -89,7 +90,8 @@ module.exports = async function activate(req, res) {
         },
         body: JSON.stringify({ key: licenseKeyClean, instance_name: hardwareIdClean }),
       });
-    } catch {
+    } catch (err) {
+      console.log('[Creem] error:', err.message);
       return res.status(503).json({ success: false, error: 'network_error' });
     }
 
