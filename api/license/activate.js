@@ -1,3 +1,5 @@
+console.log('[ENV] CREEM_API_KEY prefix:', process.env.CREEM_API_KEY ? process.env.CREEM_API_KEY.substring(0, 12) : 'UNDEFINED');
+
 const { Pool } = require('pg');
 
 const pool = new Pool({
