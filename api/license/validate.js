@@ -5,7 +5,12 @@ const pool = new Pool({
   ssl: { rejectUnauthorized: false },
 });
 
-const CREEM_VALIDATE_URL = 'https://api.creem.io/v1/licenses/validate';
+function creemApiBaseUrl() {
+  const key = process.env.CREEM_API_KEY || '';
+  return key.startsWith('creem_test_') ? 'https://test-api.creem.io/v1' : 'https://api.creem.io/v1';
+}
+
+const CREEM_VALIDATE_URL = `${creemApiBaseUrl()}/licenses/validate`;
 
 function isValidId(value) {
   return typeof value === 'string' && value.trim().length > 0;
