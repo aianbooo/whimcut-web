@@ -34,9 +34,6 @@ async function mapCreemError(res) {
     raw = await res.text();
   } catch {}
 
-  console.log('[Creem] status:', res.status);
-  console.log('[Creem] body:', raw);
-
   const message = raw.toLowerCase();
 
   if (res.status === 404) {
@@ -95,8 +92,7 @@ module.exports = async function activate(req, res) {
         },
         body: JSON.stringify({ key: licenseKeyClean, instance_name: hardwareIdClean }),
       });
-    } catch (err) {
-      console.log('[Creem] error:', err.message);
+    } catch {
       return res.status(503).json({ success: false, error: 'network_error' });
     }
 
