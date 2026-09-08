@@ -59,6 +59,7 @@ module.exports = async function activate(req, res) {
   const body = req.body || {};
   const licenseKey = body.license_key;
   const hardwareId = body.hardware_id;
+  const instanceName = body.instance_name;
 
   if (!isValidId(licenseKey) || !isValidId(hardwareId)) {
     return res.status(400).json({ success: false, error: 'invalid_request' });
@@ -66,6 +67,7 @@ module.exports = async function activate(req, res) {
 
   const licenseKeyClean = licenseKey.trim();
   const hardwareIdClean = hardwareId.trim();
+  const creemInstanceName = instanceName || hardwareIdClean;
 
   try {
     const existing = await pool.query(
@@ -90,7 +92,7 @@ module.exports = async function activate(req, res) {
           Accept: 'application/json',
           'x-api-key': process.env.CREEM_API_KEY,
         },
-        body: JSON.stringify({ key: licenseKeyClean, instance_name: hardwareIdClean }),
+        body: JSON.stringify({ key: licenseKeyClean, instance_name: creemInstanceName }),
       });
     } catch {
       return res.status(503).json({ success: false, error: 'network_error' });
