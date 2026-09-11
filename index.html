@@ -122,7 +122,8 @@
           <div class="hero-buttons">
             <a href="https://download.whimcut.com/WhimCut-v2.1.dmg"
                download
-               class="btn btn-primary" data-i18n="hero.ctaDownload">DOWNLOAD FOR MAC</a>
+               class="btn btn-primary" data-i18n="hero.ctaDownload"
+               onclick="gtag('event', 'file_download', {'file_name': 'WhimCut-v2.1.dmg', 'link_url': this.href})">DOWNLOAD FOR MAC</a>
             <a href="#how-it-works" class="btn btn-secondary" data-i18n="hero.ctaSeeHow">SEE HOW IT WORKS</a>
           </div>
         </div>
@@ -313,7 +314,8 @@
           </ul>
           <a href="https://download.whimcut.com/WhimCut-v2.1.dmg"
              download
-             class="pricing-card-btn" data-i18n="pricing.free.cta">DOWNLOAD FREE</a>
+             class="pricing-card-btn" data-i18n="pricing.free.cta"
+             onclick="gtag('event', 'file_download', {'file_name': 'WhimCut-v2.1.dmg', 'link_url': this.href})">DOWNLOAD FREE</a>
           <p class="pricing-card-note" data-i18n="pricing.free.note">macOS 12 or later</p>
         </div>
 
