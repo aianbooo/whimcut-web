@@ -1305,6 +1305,16 @@ body > .checkerboard:last-child {
   nav {
     padding: 0 24px;
   }
+  nav .nav-logo img {
+    width: auto;
+    max-width: 120px;
+  }
+  nav .nav-actions {
+    gap: 12px;
+  }
+  .custom-select-toggle {
+    flex-shrink: 0;
+  }
   .nav-hamburger {
     display: flex;
   }
