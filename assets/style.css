@@ -1306,8 +1306,8 @@ body > .checkerboard:last-child {
     padding: 0 24px;
   }
   nav .nav-logo img {
+    height: 36px;
     width: auto;
-    max-width: 120px;
   }
   nav .nav-actions {
     gap: 12px;
