@@ -40,18 +40,6 @@
     return null;
   }
 
-  function detectBrowserLang() {
-    var nav = (navigator.languages && navigator.languages[0]) || navigator.language || '';
-    var lang = nav.toLowerCase();
-    if (lang.indexOf('zh') === 0) {
-      if (/tw|hk|mo|hant/.test(lang)) return 'zh-TW';
-      return 'zh-CN';
-    }
-    if (lang.indexOf('ja') === 0) return 'ja';
-    if (lang.indexOf('de') === 0) return 'de';
-    return null;
-  }
-
   function getUrlLang() {
     try {
       var params = new URLSearchParams(window.location.search);
@@ -62,7 +50,7 @@
   }
 
   function resolveInitialLang() {
-    return getUrlLang() || getSavedLang() || detectBrowserLang() || DEFAULT_LANG;
+    return getUrlLang() || getSavedLang() || DEFAULT_LANG;
   }
 
   function triggerLabelFor(code) {

@@ -55,13 +55,6 @@
           if (saved && SUPPORTED.indexOf(saved) !== -1) lang = saved;
         } catch (e) {}
       }
-      if (!lang) {
-        var nav = (navigator.languages && navigator.languages[0]) || navigator.language || '';
-        var l = nav.toLowerCase();
-        if (l.indexOf('zh') === 0) lang = /tw|hk|mo|hant/.test(l) ? 'zh-TW' : 'zh-CN';
-        else if (l.indexOf('ja') === 0) lang = 'ja';
-        else if (l.indexOf('de') === 0) lang = 'de';
-      }
       if (!lang) lang = 'en';
       document.documentElement.lang = lang;
       document.documentElement.classList.add('i18n-loading');
