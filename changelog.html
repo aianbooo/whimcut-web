@@ -217,6 +217,78 @@
 
       <div class="changelog-entry">
         <div class="changelog-meta">
+          <span class="changelog-version">v2.3</span>
+          <span class="changelog-date">November 2, 2026</span>
+        </div>
+        <div class="changelog-body">
+          <h2 class="changelog-title">Filters, strokes &amp;<br>a smarter crop</h2>
+
+          <p class="changelog-section-label">🚀 New Features / 全新功能</p>
+          <ul class="changelog-items">
+            <li>
+              <strong>Filter System (滤镜系统)</strong>
+              Introduced independent LayerFilterEffect architecture and async background rendering cache. Added 5 professional filter effects: Risograph (with 5 presets, dot size, grain sliders), Duotone (5 presets, intensity slider), Halftone (4 styles, dot size, contrast sliders), Tint (custom color panel, intensity slider), and Vintage (fade, warmth, grain).
+              <br>
+              引入独立的 LayerFilterEffect 架构与异步后台渲染缓存，新增 5 种专业滤镜：Risograph（5 种预设、点径与颗粒滑杆）、Duotone（5 种预设与强度滑杆）、Halftone（4 种样式、点径与对比度滑杆）、Tint（自定义颜色面板与强度滑杆）以及 Vintage（褪色、暖度与颗粒）。
+            </li>
+            <li>
+              <strong>Stroke System (描边系统)</strong>
+              Introduced independent LayerStrokeEffect and strokeImages cache. Powered by morphological expansion and source-out compositing pipeline with zero white gaps. Supports Normal mode and Torn Paper mode (smooth low-frequency noise and displacement distortion). Features dynamic width/roughness sliders and Figma-like selection box auto-hide during drag.
+              <br>
+              引入独立的 LayerStrokeEffect 与 strokeImages 缓存，基于形态学膨胀与 source-out 合成管线实现零白边。支持普通模式与撕纸模式（平滑低频噪声与位移扭曲）。提供动态粗细/粗糙度滑杆，拖动时选中框自动隐藏（类 Figma 体验）。
+            </li>
+            <li>
+              <strong>Toolbar 2×4 Expansion (工具栏 2×4 扩展)</strong>
+              Upgraded main toolbar from 2×3 to 2×4 layout, adding a dedicated Filter + Stroke operation row.
+              <br>
+              主工具栏由 2×3 升级为 2×4 布局，新增独立的滤镜 + 描边操作行。
+            </li>
+            <li>
+              <strong>Crop Enhancements (裁剪功能增强)</strong>
+              Added Shift straight-line drawing with a stable anchor model and corner markers (eliminating jitter/tailing). Added full exit from crop mode via Right-click / ESC.
+              <br>
+              新增 Shift 直线绘制（稳定锚点模型 + 角点标记，消除抖动与拖尾），并支持右键 / ESC 完全退出裁剪模式。
+            </li>
+            <li>
+              <strong>Font Embedding (字体嵌入)</strong>
+              Embedded ChicagoFLF font directly into the app bundle via ATSApplicationFontsPath for consistent cross-environment display.
+              <br>
+              通过 ATSApplicationFontsPath 将 ChicagoFLF 字体直接嵌入 App 包，确保跨环境显示一致。
+            </li>
+          </ul>
+
+          <p class="changelog-section-label">🛠️ Bug Fixes &amp; Optimizations / 修复与优化</p>
+          <ul class="changelog-items">
+            <li>
+              <strong>MoodBoard export lost filters &amp; strokes</strong>
+              Fixed MoodBoard export (Download / Save to Collages) missing filters and strokes, and correctly included strokeExpand in bounding box calculations.
+              <br>
+              修复 MoodBoard 导出（下载 / 存为拼贴）丢失滤镜与描边的问题，并将描边扩展量正确计入包围盒计算。
+            </li>
+            <li>
+              <strong>Mirror flip did not flip stroke layers</strong>
+              Fixed mirror flip (Flip) bug where stroke layers did not follow horizontal/vertical flips.
+              <br>
+              修复镜像翻转（Flip）时描边层未跟随水平/垂直翻转的问题。
+            </li>
+            <li>
+              <strong>Stroke misalignment on scaling / non-uniform stretch</strong>
+              Fixed responsive scaling and non-uniform stretch edge misalignment / white gaps by calculating stroke expansion independently per axis (Δx, Δy) and triggering edge rebuild on drag release.
+              <br>
+              修复响应式缩放与非等比拉伸时的描边错位/白边问题——按轴独立计算描边扩展量（Δx、Δy），并在拖动松手时触发重建。
+            </li>
+            <li>
+              <strong>NSColorPanel memory leak</strong>
+              Fixed NSColorPanel memory leak issue by implementing persistent NotificationCenter observer token cleanup.
+              <br>
+              修复 NSColorPanel 内存泄漏问题，实现 NotificationCenter 观察者 token 的持久化清理。
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="changelog-entry">
+        <div class="changelog-meta">
           <span class="changelog-version">v2.2</span>
           <span class="changelog-date">September 6, 2026</span>
         </div>
