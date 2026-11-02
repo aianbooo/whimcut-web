@@ -227,43 +227,43 @@
           <ul class="changelog-items">
             <li>
               <strong>Filter System</strong>
-              Introduced an independent LayerFilterEffect architecture and async background rendering cache. Added 5 professional filter effects: Risograph (5 presets, dot size and grain sliders), Duotone (5 presets, intensity slider), Halftone (4 styles, dot size and contrast sliders), Tint (custom color panel, intensity slider), and Vintage (fade, warmth, and grain).
+              Add artistic flair to your images! Choose from 5 stylized filter effects—Risograph, Duotone, Halftone, Tint, and Vintage—with easy-to-use sliders for dot size, grain, warmth, and intensity.
             </li>
             <li>
               <strong>Stroke System</strong>
-              Introduced an independent LayerStrokeEffect and strokeImages cache. Powered by a morphological expansion and source-out compositing pipeline with zero white gaps. Supports Normal mode and Torn Paper mode (smooth low-frequency noise and displacement distortion). Features dynamic width/roughness sliders and Figma-like selection-box auto-hide during drag.
+              Easily outline your cutouts! Supports clean Normal borders as well as expressive Torn Paper edges with adjustable width, color, and roughness. Selection boxes auto-hide while tweaking for a distraction-free preview.
             </li>
             <li>
-              <strong>Toolbar 2×4 Expansion</strong>
-              Upgraded the main toolbar from a 2×3 to a 2×4 layout, adding a dedicated Filter + Stroke operation row.
+              <strong>Expanded 2×4 Toolbar</strong>
+              Upgraded the toolbar layout to make room for dedicated Filter and Stroke controls right at your fingertips.
             </li>
             <li>
-              <strong>Crop Enhancements</strong>
-              Added Shift straight-line drawing with a stable anchor model and corner markers (eliminating jitter and tailing). Added full exit from crop mode via right-click or Esc.
+              <strong>Smarter Straight-Line Crop</strong>
+              Hold Shift while using the lasso or crop tools to snap smooth, jitter-free straight lines. Press Esc or right-click anytime to cleanly exit crop mode.
             </li>
             <li>
-              <strong>Font Embedding</strong>
-              Embedded the ChicagoFLF font directly into the app bundle via ATSApplicationFontsPath for consistent cross-environment display.
+              <strong>Built-in Fonts</strong>
+              Embedded the vintage ChicagoFLF font so text and menus look consistently sharp on every Mac.
             </li>
           </ul>
 
           <p class="changelog-section-label">Bug Fixes &amp; Optimizations</p>
           <ul class="changelog-items">
             <li>
-              <strong>MoodBoard export dropped filters &amp; strokes</strong>
-              Fixed MoodBoard export (Download / Save to Collages) dropping filters and strokes, and correctly included strokeExpand in the bounding-box calculation.
+              <strong>MoodBoard Export</strong>
+              Fixed an issue where exported collages dropped applied filters and outline strokes.
             </li>
             <li>
-              <strong>Mirror flip did not flip stroke layers</strong>
-              Fixed a mirror-flip bug where stroke layers did not follow horizontal or vertical flips.
+              <strong>Mirror Flip</strong>
+              Fixed a bug where outline strokes didn't mirror along with the flipped image.
             </li>
             <li>
-              <strong>Stroke misalignment on scaling / non-uniform stretch</strong>
-              Fixed edge misalignment and white gaps when scaling (including non-uniform stretch) by computing stroke expansion independently per axis (Δx, Δy) and rebuilding the stroke on drag release.
+              <strong>Smooth Scaling</strong>
+              Fixed outlines tearing, misaligning, or creating white gaps when resizing or stretching images non-proportionally.
             </li>
             <li>
-              <strong>NSColorPanel memory leak</strong>
-              Fixed an NSColorPanel memory leak by implementing persistent NotificationCenter observer-token cleanup.
+              <strong>Performance &amp; Stability</strong>
+              Resolved a potential memory leak with the color picker to keep the app running fast and stable.
             </li>
           </ul>
         </div>
