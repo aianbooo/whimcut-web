@@ -735,56 +735,80 @@ html[lang="de"] #hero .hero-buttons {
 
 
 
-/* 左侧工具栏高亮覆盖层 */
+/* 左侧工具栏：覆盖背景图中已绘制的工具栏，重建为 2×4 的 HTML 网格。
+   覆盖层底色与原图纸张色一致（#F4F3EF），无缝遮住旧图标。 */
 .create-toolbar {
   position: absolute;
-  inset: 0;
+  left: 14px;
+  top: 55px;
+  width: 78px;
+  height: 182px;
+  background-color: #F4F3EF;
   z-index: 20;
   pointer-events: none;
 }
 
-.create-toolbar .btn-tool {
+.create-toolbar-grid {
   position: absolute;
-  background: transparent;
-  border: none;
+  left: 8px;    /* 全局 X = 22px */
+  top: 6px;     /* 全局 Y = 61px */
+  display: grid;
+  grid-template-columns: repeat(2, 26px);
+  grid-auto-rows: 26px;
+  column-gap: 5px;
+  row-gap: 4px;
+}
+
+.create-toolbar .btn-tool,
+.create-toolbar .btn-label {
+  box-sizing: border-box;
+  border: 1px solid #0A050F;
+  background-color: transparent;
   padding: 0;
   margin: 0;
+  font-family: inherit;
   cursor: pointer;
   pointer-events: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: inherit;
-  color: transparent;
-}
-
-.create-toolbar .btn-copy {
-  left: 22px;
-  top: 61px;
-  width: 26px;
-  height: 26px;
-}
-
-.create-toolbar .btn-layer {
-  left: 53px;
-  top: 61px;
-  width: 26px;
-  height: 26px;
-}
-
-.create-toolbar .btn-save {
-  left: 22px;
-  top: 200px;
-  width: 58px;
-  height: 20px;
-  font-size: 11px;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
+.create-toolbar .btn-tool {
+  width: 26px;
+  height: 26px;
+  color: transparent;
+}
+
+.create-toolbar .btn-tool img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.create-toolbar .btn-label {
+  position: absolute;
+  left: 8px;
+  width: 58px;
+  height: 20px;
+  color: #0A050F;
+  font-size: 11px;
+}
+
+.create-toolbar .btn-clear { top: 128px; }
+.create-toolbar .btn-save  { top: 157px; }
+
 /* 高亮/反色：黑色背景 + 白色图标/文字 */
-.create-toolbar .btn-tool.is-active {
+.create-toolbar .btn-tool.is-active,
+.create-toolbar .btn-label.is-active {
   background-color: #0A050F;
   color: #F4F3EF;
+}
+
+.create-toolbar .btn-tool.is-active img {
+  filter: invert(1);
 }
 
 /* 像素光标：初始置于画布右下角之外（隐藏） */

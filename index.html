@@ -215,11 +215,20 @@
           <div class="how-image create-stage">
           <img src="assets/images/create-browser-bg.png" class="create-bg" alt="MoodBoard" />
 
-          <!-- 工具栏高亮覆盖层（用于后续按钮反色） -->
+          <!-- 左侧工具栏：2×4 网格，共 8 个按钮 -->
           <div class="create-toolbar">
-            <button class="btn-tool btn-copy" aria-label="Copy"></button>
-            <button class="btn-tool btn-layer" aria-label="Layer"></button>
-            <button class="btn-tool btn-save" aria-label="Save">Save</button>
+            <div class="create-toolbar-grid">
+              <button class="btn-tool btn-copy" aria-label="Copy"><img src="assets/images/toolbar-copy.png" alt="" /></button>
+              <button class="btn-tool btn-layer" aria-label="Layer"><img src="assets/images/toolbar-layer.png" alt="" /></button>
+              <button class="btn-tool btn-rotate" aria-label="Rotate"><img src="assets/images/toolbar-rotate.png" alt="" /></button>
+              <button class="btn-tool btn-delete" aria-label="Delete"><img src="assets/images/toolbar-delete.png" alt="" /></button>
+              <button class="btn-tool btn-undo" aria-label="Undo"><img src="assets/images/toolbar-undo.png" alt="" /></button>
+              <button class="btn-tool btn-redo" aria-label="Redo"><img src="assets/images/toolbar-redo.png" alt="" /></button>
+              <button class="btn-tool btn-filter" aria-label="Filter"><img src="assets/images/toolbar-filter.png" alt="" /></button>
+              <button class="btn-tool btn-stroke" aria-label="Stroke"><img src="assets/images/toolbar-stroke.png" alt="" /></button>
+            </div>
+            <button class="btn-label btn-clear" aria-label="Clear">Clear</button>
+            <button class="btn-label btn-save" aria-label="Save">Save</button>
           </div>
 
           <!-- 右侧画布与初始散落元素 -->

@@ -48,7 +48,7 @@
     purpleGrab:  { x: 333, y: 122.5 },   // 紫色花中心
     purpleDrop:  { x: 270, y: 140 },     // 紫色花落点：瓶口中上方
     // 步骤 6：保存
-    saveBtn:     { x: 51,  y: 210 }      // Save 按钮中心
+    saveBtn:     { x: 51,  y: 222 }      // Save 按钮中心
   };
 
   // 素材目标位移（相对其 base left/top）
